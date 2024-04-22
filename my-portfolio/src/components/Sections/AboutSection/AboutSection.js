@@ -1,4 +1,4 @@
-import "../../../styles/App.css";
+import "./about-section.css";
 
 const AboutSection = () => {
   return (

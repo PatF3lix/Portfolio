@@ -1,15 +1,15 @@
-import "./styles/App.css";
+import "./App.css";
+import "./css utils/grids.css";
 
-import Overlay from "./components/Overlay";
-import Curtain from "./components/Curtain";
-import NavBar from "./components/NavBar";
-import Btn from "./components/Btn";
-import Menu from "./components/Menu";
-import ListItem from "./components/ListItem";
+import Overlay from "./components/Reusable/Overlay/Overlay";
+import Curtain from "./components/Curtain/Curtain";
+import NavBar from "./components/Reusable/NavBar/NavBar";
+import Btn from "./components/Reusable/Btn/Btn";
+import Menu from "./components/Reusable/Menu/Menu";
+import ListItem from "./components/Reusable/LisItem/ListItem";
 import mainMenuOptions from "./data/MainMenuOptions";
-import ContentSection from "./components/Content-Section";
+import ContentSection from "./components/Sections/ContentSection/ContentSection";
 import useCurtains from "./hooks/useCurtains";
-import { useEffect } from "react";
 
 function App() {
   const {
@@ -19,12 +19,8 @@ function App() {
     handleTransitionEnd,
   } = useCurtains(mainMenuOptions[0]);
 
-  useEffect(() => {
-    handleMainMenuBtnClick(mainMenuOptions[0]);
-  }, []);
-
   return (
-    <div className="app">
+    <div className="app grid-row-2">
       <Menu classes={"main-menu"}>
         <NavBar classes={"main-menu--nav"}>
           {mainMenuOptions.map((menuOption) => {
@@ -60,7 +56,6 @@ function App() {
           />
         </Overlay>
       </ContentSection>
-      <Menu classes={"side-menu"}></Menu>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import "../../../styles/App.css";
+import "./portfolio-section.css";
 
 const PortfolioSection = () => {
   return (

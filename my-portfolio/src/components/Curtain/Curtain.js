@@ -1,4 +1,4 @@
-import "../styles/Curtains.css";
+import "./Curtains.css";
 
 const Curtain = ({ classes, handleTransitionEnd }) => {
   return <div className={classes} onTransitionEnd={handleTransitionEnd}></div>;

@@ -1,0 +1,11 @@
+.main-menu {
+  background-color: black;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-menu-item:not(:last-child) {
+  margin-right: 2rem;
+}
