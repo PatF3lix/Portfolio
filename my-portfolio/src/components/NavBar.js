@@ -1,0 +1,9 @@
+const NavBar = ({ children, classes }) => {
+  return (
+    <nav className={classes}>
+      <ul className="nav-list">{children}</ul>
+    </nav>
+  );
+};
+
+export default NavBar;
