@@ -1,4 +1,21 @@
 .about-section {
   grid-row: 1/2;
   grid-column: 1/2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background: #242425;
+}
+
+.about-me {
+  grid-column: 1/2;
+}
+
+.about-me-img {
+  grid-column: 2/3;
+  background-image: url("../../../data/aboutMe-mock-pic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
 }
