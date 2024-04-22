@@ -1,8 +1,8 @@
-import HeroSection from "../components/Sections/HeroSection";
-import ResumeSection from "../components/Sections/ResumeSection";
-import PortfolioSection from "../components/Sections/PortfolioSection";
-import AboutSection from "../components/Sections/AboutSection";
-import ContactsSection from "../components/Sections/ContactsSection";
+import HeroSection from "../components/Sections/HeroSection/HeroSection";
+import ResumeSection from "../components/Sections/ResumeSection/ResumeSection";
+import PortfolioSection from "../components/Sections/PortfolioSection/PortfolioSection";
+import AboutSection from "../components/Sections/AboutSection/AboutSection";
+import ContactsSection from "../components/Sections/ContactsSection/ContactsSection";
 const mainMenuOptions = [
   { id: 1, label: "Home", content: <HeroSection /> },
   { id: 2, label: "Resume", content: <ResumeSection /> },

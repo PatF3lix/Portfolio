@@ -9,6 +9,7 @@ import ListItem from "./components/ListItem";
 import mainMenuOptions from "./data/MainMenuOptions";
 import ContentSection from "./components/Content-Section";
 import useCurtains from "./hooks/useCurtains";
+import { useEffect } from "react";
 
 function App() {
   const {
@@ -16,7 +17,11 @@ function App() {
     selectedOption,
     handleMainMenuBtnClick,
     handleTransitionEnd,
-  } = useCurtains();
+  } = useCurtains(mainMenuOptions[0]);
+
+  useEffect(() => {
+    handleMainMenuBtnClick(mainMenuOptions[0]);
+  }, []);
 
   return (
     <div className="app">

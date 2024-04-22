@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const useCurtains = () => {
+const useCurtains = (defaultOption) => {
   const [curtainsVisible, setCurtainsVisible] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(defaultOption);
 
   const handleMainMenuBtnClick = (option) => {
     setCurtainsVisible(true);
@@ -12,7 +12,7 @@ const useCurtains = () => {
       console.log(selectedOption);
 
       setCurtainsVisible(false);
-    }, 2000);
+    }, 1500);
   };
 
   const handleTransitionEnd = () => {
