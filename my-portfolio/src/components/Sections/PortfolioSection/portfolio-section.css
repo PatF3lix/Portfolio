@@ -6,3 +6,19 @@
   grid-template-rows: 1fr;
   background: linear-gradient(to bottom, #08233c, #536575, #21214a);
 }
+
+.portfolio-title {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #cce5e7;
+  text-align: center;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  opacity: 0.2;
+}
+
+.portfolio-projects-list {
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+}

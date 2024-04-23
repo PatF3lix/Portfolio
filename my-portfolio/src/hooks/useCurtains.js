@@ -9,8 +9,6 @@ const useCurtains = (defaultOption) => {
 
     setTimeout(() => {
       setSelectedOption(option);
-      console.log(selectedOption);
-
       setCurtainsVisible(false);
     }, 1500);
   };
