@@ -31,3 +31,21 @@
   z-index: 999;
   text-align: center;
 }
+
+.hero-name {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.hero-intro {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
