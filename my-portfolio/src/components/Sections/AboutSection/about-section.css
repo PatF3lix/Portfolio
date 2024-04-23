@@ -8,7 +8,6 @@
 }
 
 .about-me {
-  grid-column: 1/2;
   width: 80%;
   height: 95%;
   margin: 2rem auto;
@@ -65,7 +64,7 @@
   height: 95%;
   margin: 2rem auto;
   border-radius: 5%;
-  background-image: url("../../../data/1000004759.jpg");
+  background-image: url("../../../data/1000004764.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
