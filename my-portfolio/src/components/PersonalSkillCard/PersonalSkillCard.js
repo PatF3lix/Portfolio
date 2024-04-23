@@ -9,7 +9,7 @@ const PersonalSkillCard = () => {
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
-          fillPercentage={"fillPercentage-50"}
+          fillPercentage={"fillPercentage-90"}
         />
       </div>
       <div>
@@ -17,7 +17,7 @@ const PersonalSkillCard = () => {
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
-          fillPercentage={"fillPercentage-50"}
+          fillPercentage={"fillPercentage-80"}
         />
       </div>
       <div>
@@ -25,7 +25,7 @@ const PersonalSkillCard = () => {
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
-          fillPercentage={"fillPercentage-50"}
+          fillPercentage={"fillPercentage-70"}
         />
       </div>
       <div>
@@ -33,7 +33,7 @@ const PersonalSkillCard = () => {
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
-          fillPercentage={"fillPercentage-50"}
+          fillPercentage={"fillPercentage-60"}
         />
       </div>
       <div>
@@ -41,7 +41,7 @@ const PersonalSkillCard = () => {
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
-          fillPercentage={"fillPercentage-50"}
+          fillPercentage={"fillPercentage-90"}
         />
       </div>
     </Card>

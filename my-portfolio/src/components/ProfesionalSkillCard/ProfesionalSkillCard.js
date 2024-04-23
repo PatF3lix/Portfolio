@@ -9,7 +9,7 @@ const ProfessionalSkillCard = () => {
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
-          fillPercentage={"fillPercentage-50"}
+          fillPercentage={"fillPercentage-80"}
         />
       </div>
       <div>
@@ -17,7 +17,7 @@ const ProfessionalSkillCard = () => {
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
-          fillPercentage={"fillPercentage-50"}
+          fillPercentage={"fillPercentage-80"}
         />
       </div>
       <div>
@@ -25,11 +25,11 @@ const ProfessionalSkillCard = () => {
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
-          fillPercentage={"fillPercentage-50"}
+          fillPercentage={"fillPercentage-60"}
         />
       </div>
       <div>
-        <h2 className="card-title-skill">Docker/Docker Compose</h2>
+        <h2 className="card-title-skill">DevOps</h2>
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}
@@ -38,6 +38,14 @@ const ProfessionalSkillCard = () => {
       </div>
       <div>
         <h2 className="card-title-skill">C/C++</h2>
+        <FillMeter
+          meterBgColor={"fill-meter-bg-red"}
+          barBgColor={"fill-bar-bg-green"}
+          fillPercentage={"fillPercentage-60"}
+        />
+      </div>
+      <div>
+        <h2 className="card-title-skill">CyberSecurity</h2>
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
           barBgColor={"fill-bar-bg-green"}

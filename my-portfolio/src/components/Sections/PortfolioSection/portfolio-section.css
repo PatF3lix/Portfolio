@@ -24,6 +24,29 @@
   gap: 2rem;
 }
 
+.portfolio-project-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.portfolio-project-image-1 {
+  background-image: url("../../../data/images/cyberGuardian.jpg");
+}
+
+.portfolio-project-image-2 {
+  background-image: url("../../../data/images/chatApp.jpg");
+}
+
+.portfolio-project-image-3 {
+  background-image: url("../../../data/images/PasswordManager.jpg");
+}
+
+.portfolio-project-image-4 {
+  background-image: url("../../../data/images/Scanning-vulnerability.jpg");
+}
+
 .professional-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min-content, 75rem));

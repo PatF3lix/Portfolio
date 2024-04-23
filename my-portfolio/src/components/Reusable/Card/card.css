@@ -1,40 +1,54 @@
 .project-card {
   margin: 2rem;
   border-radius: 5%;
-  background-color: #cce5e7;
+  background-color: #08233c;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   height: 30rem;
   width: 30rem;
+  overflow: hidden;
+  color: #a9c6c9;
 }
 
 .profesionalSkillsCard {
-  margin: 2rem;
+  margin: 1rem;
   border-radius: 5%;
-  background-color: #cce5e7;
+  background-color: #08233c;
   display: grid;
   grid-template-columns: repeat(2, 20rem);
   grid-template-rows: repeat(2, 5rem);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   height: 18rem;
   width: 41rem;
+  color: #a9c6c9;
+  letter-spacing: 1px;
+}
+
+.skill-title {
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  color: #a9c6c9;
+  letter-spacing: 2px;
 }
 
 .personalSkillsCard {
-  margin: 2rem;
+  margin: 1rem;
   border-radius: 5%;
-  background-color: #cce5e7;
+  background-color: #08233c;
   display: grid;
   grid-template-columns: repeat(2, 20rem);
   grid-template-rows: repeat(2, 5rem);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   height: 18rem;
   width: 41rem;
+  color: #a9c6c9;
+  letter-spacing: 1px;
 }
 
 .card-title {
   margin: 1rem auto;
+  letter-spacing: 1px;
 }
 
 .card-title-skill {

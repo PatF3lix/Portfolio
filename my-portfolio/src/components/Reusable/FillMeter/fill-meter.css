@@ -6,7 +6,7 @@
 }
 
 .fill-meter-bg-red {
-  background-color: red;
+  background-color: #a9c6c9;
 }
 
 .fill-bar {
@@ -15,9 +15,29 @@
 }
 
 .fill-bar-bg-green {
-  background-color: #4caf50;
+  background-color: #0b799d;
 }
 
 .fillPercentage-50 {
   width: 50%;
+}
+
+.fillPercentage-60 {
+  width: 60%;
+}
+
+.fillPercentage-70 {
+  width: 70%;
+}
+
+.fillPercentage-80 {
+  width: 80%;
+}
+
+.fillPercentage-90 {
+  width: 90%;
+}
+
+.fillPercentage-1000 {
+  width: 100%;
 }
