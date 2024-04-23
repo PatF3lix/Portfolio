@@ -1,0 +1,23 @@
+.fill-meter {
+  margin-left: 1rem;
+  width: 80%;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.fill-meter-bg-red {
+  background-color: red;
+}
+
+.fill-bar {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.fill-bar-bg-green {
+  background-color: #4caf50;
+}
+
+.fillPercentage-50 {
+  width: 50%;
+}
