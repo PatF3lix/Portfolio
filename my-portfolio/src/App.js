@@ -26,7 +26,10 @@ function App() {
           {mainMenuOptions.map((menuOption) => {
             return (
               <ListItem key={menuOption.id} classes={"main-menu-item"}>
-                <Btn onClick={() => handleMainMenuBtnClick(menuOption)}>
+                <Btn
+                  classes={"btn"}
+                  onClick={() => handleMainMenuBtnClick(menuOption)}
+                >
                   <p>{menuOption.label}</p>
                 </Btn>
               </ListItem>
