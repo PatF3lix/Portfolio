@@ -1,9 +1,10 @@
 import "./portfolio-section.css";
+import Card from "../../Reusable/Card/Card";
 
 const PortfolioSection = () => {
   return (
     <section className="portfolio-section">
-      <h1>Portfolio</h1>
+      <div className="portfolio-projects-list"></div>
     </section>
   );
 };

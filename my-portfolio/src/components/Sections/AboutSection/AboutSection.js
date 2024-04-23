@@ -40,6 +40,9 @@ const AboutSection = () => {
               <Btn classes={"about-me-btn"}>
                 <p>LinkedIn</p>
               </Btn>
+              <Btn classes={"about-me-btn"}>
+                <p>Portfolio</p>
+              </Btn>
             </li>
           </ul>
         </div>
