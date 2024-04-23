@@ -2,8 +2,8 @@
   grid-row: 1/2;
   grid-column: 1/2;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(auto-fill, min-content, 1fr);
+  grid-template-columns: auto;
   background: linear-gradient(to bottom, #08233c, #536575, #21214a);
 }
 
@@ -26,6 +26,14 @@
 
 .professional-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min-content, 30rem));
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 75rem));
   grid-column: auto;
+}
+
+.profesional {
+  justify-self: center;
+}
+
+.personal {
+  justify-self: center;
 }

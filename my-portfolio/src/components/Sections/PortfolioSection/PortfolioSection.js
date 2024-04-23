@@ -11,8 +11,12 @@ const PortfolioSection = () => {
         <PortfolioProjects />
       </div>
       <div className="professional-content">
-        <ProfessionalSkillCard />
-        <PersonalSkillCard />
+        <div className="profesional">
+          <ProfessionalSkillCard />
+        </div>
+        <div className="personal">
+          <PersonalSkillCard />
+        </div>
       </div>
     </section>
   );
