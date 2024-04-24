@@ -29,7 +29,7 @@ function App() {
               <ListItem key={menuOption.id} classes={"main-menu-item"}>
                 <Btn
                   classes={"btn"}
-                  onClick={() => handleMainMenuBtnClick(menuOption)}
+                  clickAction={() => handleMainMenuBtnClick(menuOption)}
                 >
                   <p>{menuOption.label}</p>
                 </Btn>

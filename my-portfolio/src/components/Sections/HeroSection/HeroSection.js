@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className="hero-section">
       <div className="presentational-info">
         <h1 className="hero-name">Patrick Felix Oliveira</h1>
-        <h2 className="hero-title">Full Stack Developer</h2>
+        <h2 className="hero-title">Software Developer</h2>
         <p className="hero-intro">
           Welcome to my portfolio!
           <br /> I&apos;m passionate about crafting innovative solutions and

@@ -1,4 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+/public/Patrick_Oliveira_CV_Dev.pdf
+.env
 
 # dependencies
 /src/data
