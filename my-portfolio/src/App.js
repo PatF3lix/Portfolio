@@ -37,27 +37,25 @@ function App() {
           })}
         </NavBar>
       </Menu>
-      <ContentSection>
-        {selectedOption.content}
-        <Overlay classes={"curtain-container"}>
-          <Curtain
-            classes={`curtain c-1 ${curtainsVisible ? "active" : ""}`}
-            onTransitionEnd={handleTransitionEnd}
-          />
-          <Curtain
-            classes={`curtain c-2 ${curtainsVisible ? "active" : ""}`}
-            onTransitionEnd={handleTransitionEnd}
-          />
-          <Curtain
-            classes={`curtain c-3 ${curtainsVisible ? "active" : ""}`}
-            onTransitionEnd={handleTransitionEnd}
-          />
-          <Curtain
-            classes={`curtain c-4 ${curtainsVisible ? "active" : ""}`}
-            onTransitionEnd={handleTransitionEnd}
-          />
-        </Overlay>
-      </ContentSection>
+      <ContentSection>{selectedOption.content}</ContentSection>
+      <Overlay classes={"curtain-container"}>
+        <Curtain
+          classes={`curtain c-1 ${curtainsVisible ? "active" : ""}`}
+          onTransitionEnd={handleTransitionEnd}
+        />
+        <Curtain
+          classes={`curtain c-2 ${curtainsVisible ? "active" : ""}`}
+          onTransitionEnd={handleTransitionEnd}
+        />
+        <Curtain
+          classes={`curtain c-3 ${curtainsVisible ? "active" : ""}`}
+          onTransitionEnd={handleTransitionEnd}
+        />
+        <Curtain
+          classes={`curtain c-4 ${curtainsVisible ? "active" : ""}`}
+          onTransitionEnd={handleTransitionEnd}
+        />
+      </Overlay>
     </div>
   );
 }
