@@ -17,6 +17,7 @@ function App() {
     selectedOption,
     handleMainMenuBtnClick,
     handleTransitionEnd,
+    displayCurtains,
   } = useCurtains(mainMenuOptions[0]);
 
   return (
@@ -38,24 +39,26 @@ function App() {
         </NavBar>
       </Menu>
       <ContentSection>{selectedOption.content}</ContentSection>
-      <Overlay classes={"curtain-container"}>
-        <Curtain
-          classes={`curtain c-1 ${curtainsVisible ? "active" : ""}`}
-          onTransitionEnd={handleTransitionEnd}
-        />
-        <Curtain
-          classes={`curtain c-2 ${curtainsVisible ? "active" : ""}`}
-          onTransitionEnd={handleTransitionEnd}
-        />
-        <Curtain
-          classes={`curtain c-3 ${curtainsVisible ? "active" : ""}`}
-          onTransitionEnd={handleTransitionEnd}
-        />
-        <Curtain
-          classes={`curtain c-4 ${curtainsVisible ? "active" : ""}`}
-          onTransitionEnd={handleTransitionEnd}
-        />
-      </Overlay>
+      {displayCurtains && (
+        <Overlay classes={"curtain-container"}>
+          <Curtain
+            classes={`curtain c-1 ${curtainsVisible ? "active" : ""}`}
+            onTransitionEnd={handleTransitionEnd}
+          />
+          <Curtain
+            classes={`curtain c-2 ${curtainsVisible ? "active" : ""}`}
+            onTransitionEnd={handleTransitionEnd}
+          />
+          <Curtain
+            classes={`curtain c-3 ${curtainsVisible ? "active" : ""}`}
+            onTransitionEnd={handleTransitionEnd}
+          />
+          <Curtain
+            classes={`curtain c-4 ${curtainsVisible ? "active" : ""}`}
+            onTransitionEnd={handleTransitionEnd}
+          />
+        </Overlay>
+      )}
     </div>
   );
 }

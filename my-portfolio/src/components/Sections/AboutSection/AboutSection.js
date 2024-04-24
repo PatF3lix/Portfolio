@@ -56,7 +56,6 @@ const AboutSection = () => {
             <h2 className="skill-title">Professional Skills</h2>
             <ProfessionalSkillCard />
           </div>
-
           <div className="personal">
             <h2 className="skill-title">Personal Skills</h2>
             <PersonalSkillCard />

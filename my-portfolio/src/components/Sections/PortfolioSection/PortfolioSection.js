@@ -1,6 +1,4 @@
 import "./portfolio-section.css";
-import ProfessionalSkillCard from "../../ProfesionalSkillCard/ProfesionalSkillCard";
-import PersonalSkillCard from "../../PersonalSkillCard/PersonalSkillCard";
 import PortfolioProjects from "../../PortfolioProjects/PortfolioProjects";
 
 const PortfolioSection = () => {

@@ -1,57 +1,61 @@
 import "./contacts-section.css";
 import Card from "../../Reusable/Card/Card";
 import Btn from "../../Reusable/Btn/Btn";
+import { useState } from "react";
 
 const ContactsSection = () => {
+  const [name, setName] = useState("hello!");
+
   return (
-    <section className="contacts-section">
-      <div className="contacts-container">
-        <h1 className={"contacts-container-title"}>Contacts</h1>
-        <div className="contacts-container-personal-information">
-          <Card classes={"contacts-card"}>
-            <div>Icon</div>
-            <h3>Address</h3>
-            <p>Portugal, Lisbon</p>
-          </Card>
-          <Card classes={"contacts-card"}>
-            <div>Icon</div>
-            <h3>Email</h3>
-            <p>pat@exemple.com</p>
-          </Card>
-          <Card classes={"contacts-card"}>
-            <div>Icon</div>
-            <h3>Phone</h3>
-            <p>+351 914 777 835</p>
-          </Card>
-          <Card classes={"contacts-card"}>
-            <div>Icon</div>
-            <h3>Freelance</h3>
-            <p>Available</p>
-          </Card>
-        </div>
-        <div className="contacts-container-form">
-          <h2 className="contacts-form">Contact Form</h2>
-          <form action="/submit" className="contacts-form">
-            <div className="form-group-fullname">
-              <label htmlFor="fullname">Full Name</label>
-              <input type="text" className="form-control" id="fullname" />
-            </div>
-            <div className="form-group-email">
-              <label htmlFor="email">Email</label>
-              <input type="text" className="form-control" id="email" />
-            </div>
-            <div className="form-group-message">
-              <label htmlFor="message">Your message</label>
-              <input type="text" className="form-control" id="message" />
-            </div>
-            <Btn type={"submit"} value="Submit">
-              <p>Submit Message</p>
-            </Btn>
+    <section className="contact-section">
+      <div className={"contact-container"}>
+        <h1 className={"contact-container-title"}>Contact</h1>
+        <p className={"contact-container-intro"}>
+          Feel free to Contact me by submitting the form below and I will get
+          back to you as soon as possible
+        </p>
+        <div className="contact-form-container">
+          <form>
+            <label htmlFor="name">FullName</label>
+            <br />
+            <input type="text" name="name" id="name" />
+            <br />
+            <label htmlFor="email">Email</label>
+            <br />
+            <input type="email" name="email" id="email" />
+            <br />
+            <label htmlFor="message">Your message</label>
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <br />
+            <Btn classes={"btn"}>Submit</Btn>
           </form>
         </div>
       </div>
-      <div className="contacts-container-image">
-        <div className="contacts-image" />
+      <div className="contact-container-cards">
+        <Card classes={"contacts-card address-card"}>
+          <div>Icon</div>
+          <h3>Address</h3>
+          <p>Portugal, Lisbon</p>
+        </Card>
+        <Card classes={"contacts-card email-card"}>
+          <div>Icon</div>
+          <h3>Email</h3>
+          <p>pat@exemple.com</p>
+        </Card>
+        <Card classes={"contacts-card Linked-card"}>
+          <div>Icon</div>
+          <h3>LinkedIn</h3>
+        </Card>
+        <Card classes={"contacts-card GitHub-card"}>
+          <div>Icon</div>
+          <h3>GitHub</h3>
+        </Card>
       </div>
     </section>
   );

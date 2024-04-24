@@ -12,10 +12,16 @@
 }
 
 .contacts-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-left: 1rem;
   background-color: #0f3559;
   color: white;
-  width: 10rem;
+  width: 15rem;
   height: 10rem;
+  border-radius: 5%;
+  font-size: 1.5rem;
 }
 
 .profesionalSkillsCard {
@@ -60,4 +66,9 @@
 
 .card-title-skill {
   margin: 2rem 0 1rem 2rem;
+}
+
+.Linked-card,
+.GitHub-card {
+  align-self: start;
 }
