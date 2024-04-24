@@ -46,17 +46,3 @@
 .portfolio-project-image-4 {
   background-image: url("../../../data/images/Scanning-vulnerability.jpg");
 }
-
-.professional-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min-content, 75rem));
-  grid-column: auto;
-}
-
-.profesional {
-  justify-self: center;
-}
-
-.personal {
-  justify-self: center;
-}

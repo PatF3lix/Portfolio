@@ -1,5 +1,7 @@
 import "./about-section.css";
 import Btn from "../../Reusable/Btn/Btn";
+import ProfessionalSkillCard from "../../ProfesionalSkillCard/ProfesionalSkillCard";
+import PersonalSkillCard from "../../PersonalSkillCard/PersonalSkillCard";
 
 const AboutSection = () => {
   return (
@@ -49,6 +51,17 @@ const AboutSection = () => {
       </div>
       <div className="about-me-img">
         <div className="profile-img" />
+        <div className="professional-content">
+          <div className="profesional">
+            <h2 className="skill-title">Professional Skills</h2>
+            <ProfessionalSkillCard />
+          </div>
+
+          <div className="personal">
+            <h2 className="skill-title">Personal Skills</h2>
+            <PersonalSkillCard />
+          </div>
+        </div>
       </div>
     </section>
   );
