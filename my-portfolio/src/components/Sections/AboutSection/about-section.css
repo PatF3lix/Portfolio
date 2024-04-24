@@ -1,17 +1,17 @@
 .about-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 75rem));
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 65rem));
   grid-template-rows: auto;
   background: linear-gradient(to bottom, #08233c, #536575, #21214a);
   justify-content: center;
   height: 100%;
   width: 100%;
-  overflow-y: auto;
+  gap: 7rem;
 }
 
 .about-me {
-  width: 80%;
-  height: 95%;
+  width: 65rem;
+  height: 62rem;
   margin: 2rem auto;
   border-radius: 5%;
   background: linear-gradient(to bottom, #6b6b6b, #0f3559);
@@ -62,8 +62,8 @@
   margin: 1rem;
 }
 .profile-img {
-  width: 80%;
-  height: 95%;
+  width: 65rem;
+  height: 62rem;
   margin: 2rem auto;
   border-radius: 5%;
   background-image: url("../../../data/images/1000004764.jpg");

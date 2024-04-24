@@ -1,6 +1,6 @@
 .portfolio-section {
   display: grid;
-  grid-template-rows: repeat(auto-fill, min-content, 1fr);
+  grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
   grid-template-columns: auto;
   background: linear-gradient(to bottom, #08233c, #536575, #21214a);
   height: 100%;
