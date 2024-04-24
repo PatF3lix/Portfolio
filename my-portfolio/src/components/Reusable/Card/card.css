@@ -11,6 +11,13 @@
   color: #a9c6c9;
 }
 
+.contacts-card {
+  background-color: #0f3559;
+  color: white;
+  width: 10rem;
+  height: 10rem;
+}
+
 .profesionalSkillsCard {
   margin: 1rem;
   border-radius: 5%;
