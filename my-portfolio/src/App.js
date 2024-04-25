@@ -1,15 +1,11 @@
 import "./App.css";
 import "./css utils/grids.css";
 
-import Overlay from "./components/Reusable/Overlay/Overlay";
-import Curtain from "./components/Curtain/Curtain";
-import NavBar from "./components/Reusable/NavBar/NavBar";
-import Btn from "./components/Reusable/Btn/Btn";
-import Menu from "./components/Reusable/Menu/Menu";
-import ListItem from "./components/Reusable/LisItem/ListItem";
 import mainMenuOptions from "./data/MainMenuOptions";
 import ContentSection from "./components/Sections/ContentSection/ContentSection";
 import useCurtains from "./hooks/useCurtains";
+import Curtains from "./components/Curtains/Curtains";
+import MainNavMenu from "./components/Sections/MenuSection/MainNavMenu";
 
 function App() {
   const {
@@ -22,42 +18,13 @@ function App() {
 
   return (
     <div className="app grid-row-2">
-      <Menu classes={"main-menu"}>
-        <NavBar classes={"main-menu--nav"}>
-          {mainMenuOptions.map((menuOption) => {
-            return (
-              <ListItem key={menuOption.id} classes={"main-menu-item"}>
-                <Btn
-                  classes={"btn"}
-                  clickAction={() => handleMainMenuBtnClick(menuOption)}
-                >
-                  <p>{menuOption.label}</p>
-                </Btn>
-              </ListItem>
-            );
-          })}
-        </NavBar>
-      </Menu>
+      <MainNavMenu handleMainMenuBtnClick={handleMainMenuBtnClick} />
       <ContentSection>{selectedOption.content}</ContentSection>
       {displayCurtains && (
-        <Overlay classes={"curtain-container"}>
-          <Curtain
-            classes={`curtain c-1 ${curtainsVisible ? "active" : ""}`}
-            onTransitionEnd={handleTransitionEnd}
-          />
-          <Curtain
-            classes={`curtain c-2 ${curtainsVisible ? "active" : ""}`}
-            onTransitionEnd={handleTransitionEnd}
-          />
-          <Curtain
-            classes={`curtain c-3 ${curtainsVisible ? "active" : ""}`}
-            onTransitionEnd={handleTransitionEnd}
-          />
-          <Curtain
-            classes={`curtain c-4 ${curtainsVisible ? "active" : ""}`}
-            onTransitionEnd={handleTransitionEnd}
-          />
-        </Overlay>
+        <Curtains
+          curtainsVisible={curtainsVisible}
+          handleTransitionEnd={handleTransitionEnd}
+        />
       )}
     </div>
   );
