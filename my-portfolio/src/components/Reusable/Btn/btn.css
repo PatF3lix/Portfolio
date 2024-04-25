@@ -6,3 +6,9 @@
   padding: 1rem 1rem;
   border-radius: 5px;
 }
+
+.btn-placement-right {
+  display: inline-block;
+  width: 20%;
+  margin: 0 auto;
+}
