@@ -1,4 +1,3 @@
-import Btn from "../../Reusable/Btn/Btn";
 import "./hero-section.css";
 
 const HeroSection = () => {
@@ -8,13 +7,12 @@ const HeroSection = () => {
         <h1 className="hero-name">Patrick Felix Oliveira</h1>
         <h2 className="hero-title">Software Developer</h2>
         <p className="hero-intro">
-          Welcome to my portfolio!
-          <br /> I&apos;m passionate about crafting innovative solutions and
-          creating seamless experiences.
+          <span className="welcome">Welcome to my portfolio!</span>
+          <br /> I&apos;m driven by the realms of full-stack application
+          development and cybersecurity,
+          <br /> where my focus centers on pioneering solutions to intricate
+          problems.
         </p>
-        <Btn classes={"btn"}>
-          <p>About Me</p>
-        </Btn>
       </div>
     </section>
   );

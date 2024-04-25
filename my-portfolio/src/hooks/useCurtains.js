@@ -1,6 +1,7 @@
 import { useState } from "react";
+import mainMenuOptions from "../data/MainMenuOptions";
 
-const useCurtains = (defaultOption) => {
+const useCurtains = (defaultOption = mainMenuOptions[0]) => {
   const [curtainsVisible, setCurtainsVisible] = useState(false);
   const [selectedOption, setSelectedOption] = useState(defaultOption);
   const [displayCurtains, setDisplayCurtains] = useState(false);

@@ -1,7 +1,6 @@
 import "./App.css";
 import "./css utils/grids.css";
 
-import mainMenuOptions from "./data/MainMenuOptions";
 import ContentSection from "./components/Sections/ContentSection/ContentSection";
 import useCurtains from "./hooks/useCurtains";
 import Curtains from "./components/Curtains/Curtains";
@@ -14,7 +13,7 @@ function App() {
     handleMainMenuBtnClick,
     handleTransitionEnd,
     displayCurtains,
-  } = useCurtains(mainMenuOptions[0]);
+  } = useCurtains();
 
   return (
     <div className="app grid-row-2">

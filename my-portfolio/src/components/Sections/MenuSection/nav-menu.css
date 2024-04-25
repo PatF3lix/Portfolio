@@ -6,6 +6,11 @@
   justify-content: center;
 }
 
+.main-menu--nav {
+  margin-left: auto;
+  transform: translateX(35%);
+}
+
 .main-menu-item:not(:last-child) {
   margin-right: 2rem;
 }

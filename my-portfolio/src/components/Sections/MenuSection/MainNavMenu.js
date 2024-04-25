@@ -2,6 +2,7 @@ import mainMenuOptions from "../../../data/MainMenuOptions";
 import Btn from "../../Reusable/Btn/Btn";
 import ListItem from "../../Reusable/LisItem/ListItem";
 import NavBar from "../../Reusable/NavBar/NavBar";
+import SocialNavHub from "../../SocialNavHub/SocialNavHub";
 import "./nav-menu.css";
 
 const MainNavMenu = ({ handleMainMenuBtnClick }) => {
@@ -21,6 +22,7 @@ const MainNavMenu = ({ handleMainMenuBtnClick }) => {
           );
         })}
       </NavBar>
+      <SocialNavHub />
     </div>
   );
 };
