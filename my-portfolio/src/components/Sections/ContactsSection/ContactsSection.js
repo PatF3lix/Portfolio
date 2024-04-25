@@ -3,7 +3,14 @@ import Btn from "../../Reusable/Btn/Btn";
 import { useState } from "react";
 
 const ContactsSection = () => {
-  const [name, setName] = useState("hello!");
+  const [fullName, setfullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(fullName, email, message);
+  };
 
   return (
     <section className="contact-section">
@@ -16,23 +23,34 @@ const ContactsSection = () => {
         <div className="contact-form-container">
           <form>
             <label htmlFor="name">FullName</label>
-            <br />
-            <input type="text" name="name" id="name" />
-            <br />
+            <input
+              value={fullName}
+              onChange={(e) => setfullName(e.currentTarget.value)}
+              type="text"
+              name="name"
+              id="name"
+            />
             <label htmlFor="email">Email</label>
-            <br />
-            <input type="email" name="email" id="email" />
-            <br />
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.currentTarget.value)}
+              type="email"
+              name="email"
+              id="email"
+            />
             <label htmlFor="message">Your message</label>
-            <br />
             <textarea
               name="message"
               id="message"
               cols="30"
               rows="10"
+              value={message}
+              onChange={(e) => setMessage(e.currentTarget.value)}
             ></textarea>
             <br />
-            <Btn classes={"btn"}>Submit</Btn>
+            <Btn clickAction={handleSubmit} classes={"btn"}>
+              Submit
+            </Btn>
           </form>
         </div>
       </div>

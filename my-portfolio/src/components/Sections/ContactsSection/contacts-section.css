@@ -15,17 +15,20 @@
 }
 
 .contact-form-container {
-  width: 25%;
+  width: 23%;
   height: 60%;
   margin: 2rem auto;
   padding: 2rem 2rem;
   border-radius: 5%;
   background: linear-gradient(to bottom, #6b6b6b, #0f3559);
-  display: flex;
-  flex-direction: column;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   color: #cce5e7;
   font-size: 1.5rem;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form-container label {
@@ -34,10 +37,16 @@
 }
 
 .contact-form-container input {
+  width: 30rem;
   margin-bottom: 1.5rem;
 }
 .contact-form-container textarea {
   margin-bottom: 1.5rem;
+  width: 30rem;
+}
+
+.contact-form-container .btn {
+  align-self: flex-end;
 }
 
 .contact-container-title {
