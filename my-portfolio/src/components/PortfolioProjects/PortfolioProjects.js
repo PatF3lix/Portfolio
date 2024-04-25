@@ -1,24 +1,23 @@
+import projectsData from "../../data/ProjectsData";
 import Card from "../Reusable/Card/Card";
 
-const PortfolioProjects = () => {
+const PortfolioProjects = ({ handleModalOpen }) => {
   return (
     <>
-      <Card classes={"project-card"}>
-        <div className="portfolio-project-image portfolio-project-image-1" />
-        <h2 className={"card-title"}>CyberGuardian</h2>
-      </Card>
-      <Card classes={" project-card project-card-sml"}>
-        <div className="portfolio-project-image portfolio-project-image-2" />
-        <h2 className={"card-title"}>ChatWithPat</h2>
-      </Card>
-      <Card classes={" project-card "}>
-        <div className="portfolio-project-image portfolio-project-image-3" />
-        <h2 className={"card-title"}>PasswordManager</h2>
-      </Card>
-      <Card classes={" project-card "}>
-        <div className="portfolio-project-image portfolio-project-image-4" />
-        <h2 className={"card-title"}>Vulnerability Scanning Tool</h2>
-      </Card>
+      {projectsData.map((project) => {
+        return (
+          <Card
+            key={project.id}
+            classes={"project-card"}
+            clickAction={() => handleModalOpen(project.id)}
+          >
+            <div
+              className={`portfolio-project-image portfolio-project-image-${project.id}`}
+            />
+            <h2 className={"card-title"}>{project.name}</h2>
+          </Card>
+        );
+      })}
     </>
   );
 };
