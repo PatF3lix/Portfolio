@@ -1,5 +1,4 @@
 import "./contacts-section.css";
-import Card from "../../Reusable/Card/Card";
 import Btn from "../../Reusable/Btn/Btn";
 import { useState } from "react";
 
@@ -36,26 +35,6 @@ const ContactsSection = () => {
             <Btn classes={"btn"}>Submit</Btn>
           </form>
         </div>
-      </div>
-      <div className="contact-container-cards">
-        <Card classes={"contacts-card address-card"}>
-          <div>Icon</div>
-          <h3>Address</h3>
-          <p>Portugal, Lisbon</p>
-        </Card>
-        <Card classes={"contacts-card email-card"}>
-          <div>Icon</div>
-          <h3>Email</h3>
-          <p>pat@exemple.com</p>
-        </Card>
-        <Card classes={"contacts-card Linked-card"}>
-          <div>Icon</div>
-          <h3>LinkedIn</h3>
-        </Card>
-        <Card classes={"contacts-card GitHub-card"}>
-          <div>Icon</div>
-          <h3>GitHub</h3>
-        </Card>
       </div>
     </section>
   );
