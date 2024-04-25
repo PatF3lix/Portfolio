@@ -5,6 +5,7 @@
   background: #0f3559;
   padding: 1rem 1rem;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn-placement-right {

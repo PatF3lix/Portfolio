@@ -1,5 +1,6 @@
 import Card from "../Reusable/Card/Card";
 import FillMeter from "../Reusable/FillMeter/FillMeter";
+import "./personal-skill-card.css";
 
 const PersonalSkillCard = () => {
   return (

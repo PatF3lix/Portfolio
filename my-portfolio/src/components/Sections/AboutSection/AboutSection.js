@@ -1,5 +1,5 @@
 import "./about-section.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ProfessionalSkillCard from "../../ProfesionalSkillCard/ProfesionalSkillCard";
 import PersonalSkillCard from "../../PersonalSkillCard/PersonalSkillCard";
 import aboutMeText from "../../../data/AboutMeText";
@@ -7,10 +7,20 @@ import Btn from "../../Reusable/Btn/Btn";
 
 const AboutSection = () => {
   const [displayText, setDisplayText] = useState(false);
+  const aboutMeRef = useRef(null);
+
+  const handleDisplayText = () => {
+    setDisplayText((visibility) => !visibility);
+    if (!displayText) {
+      aboutMeRef.current.style.height = "100%";
+    } else {
+      aboutMeRef.current.style.height = "92%";
+    }
+  };
 
   return (
     <section className="about-section">
-      <div className="about-me">
+      <div ref={aboutMeRef} className="about-me">
         <h1 className="about-me-title">About Me</h1>
         <div className="about-me-content">
           <h2 className="about-me-intro">Hey there, I&apos;m Patrick,</h2>
@@ -32,7 +42,7 @@ const AboutSection = () => {
         </div>
         <Btn
           classes={"btn btn-placement-right"}
-          clickAction={() => setDisplayText((visibility) => !visibility)}
+          clickAction={handleDisplayText}
         >
           Show More
         </Btn>
