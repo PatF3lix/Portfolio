@@ -1,5 +1,5 @@
 .main-menu {
-  background-color: #26262e;
+  background-color: #17171c;
   grid-row: 1/2;
   display: grid;
   grid-template-columns: repeat(3, min-content);

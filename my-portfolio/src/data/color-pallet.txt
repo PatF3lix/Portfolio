@@ -13,3 +13,5 @@ Dark and greys
 #1a1a1a
 #040507
 #26262e
+main menu 
+#17171c 
