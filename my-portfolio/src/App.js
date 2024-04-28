@@ -5,8 +5,8 @@ import ContentSection from "./components/Sections/ContentSection/ContentSection"
 import useCurtains from "./hooks/useCurtains";
 import Curtains from "./components/Curtains/Curtains";
 import MainNavMenu from "./components/Sections/MenuSection/MainNavMenu";
-import { useState } from "react";
 import SlideDownMenu from "./components/SlideDownMenu/SlideDownMenu";
+import { useState } from "react";
 
 function App() {
   const [openedMenu, setOpenedMenu] = useState(false);
@@ -19,7 +19,7 @@ function App() {
   } = useCurtains();
 
   return (
-    <div className="app grid-row-2">
+    <div id="app" className="app grid-row-2">
       <MainNavMenu
         handleMainMenuBtnClick={handleMainMenuBtnClick}
         openedMenu={openedMenu}
