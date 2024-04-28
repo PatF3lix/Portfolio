@@ -8,10 +8,25 @@ import { RiContactsFill } from "react-icons/ri";
 import { FaEye } from "react-icons/fa";
 
 const mainMenuOptions = [
-  { id: 1, label: <FaHome />, content: <HeroSection /> },
-  { id: 2, label: <RiContactsFill />, content: <AboutSection /> },
-  { id: 3, label: <FaEye />, content: <PortfolioSection /> },
-  { id: 4, label: <FaRegEnvelope />, content: <ContactsSection /> },
+  {
+    id: 1,
+    label: "Home",
+    icon: <FaHome />,
+    content: <HeroSection />,
+  },
+  {
+    id: 2,
+    label: "About",
+    icon: <RiContactsFill />,
+    content: <AboutSection />,
+  },
+  { id: 3, label: "Portfolio", icon: <FaEye />, content: <PortfolioSection /> },
+  {
+    id: 4,
+    label: "Contact",
+    icon: <FaRegEnvelope />,
+    content: <ContactsSection />,
+  },
 ];
 
 export default mainMenuOptions;

@@ -39,3 +39,32 @@
   font-size: 2.2rem;
   cursor: pointer;
 }
+
+.main-menu-btn::after {
+  content: attr(data-alt);
+  position: absolute;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-menu-btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.main-menu-btn .main-menu-btn:link,
+.main-menu-btn:hover {
+  transform: translateY(-2px);
+}
+
+.main-menu-btn:active {
+  transform: translateY(0);
+}
