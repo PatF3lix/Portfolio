@@ -1,5 +1,8 @@
 import useDownloadCv from "../../hooks/useDownloadCv";
 import Btn from "../Reusable/Btn/Btn";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa6";
 
 import "./slide-down-menu.css";
 
@@ -15,7 +18,8 @@ const SlideDownMenu = () => {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub Page
+            <FaGithub />
+            <span className="link-text">GitHub Page</span>
           </a>
         </li>
         <li className="menu-option">
@@ -25,12 +29,14 @@ const SlideDownMenu = () => {
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn Account
+            <FaLinkedin />
+            <span className="link-text">LinkedIn Account</span>
           </a>
         </li>
         <li className="menu-option">
           <Btn classes="slidedown-menu-btn" clickAction={handleDownload}>
-            Download CV
+            <FaDownload />
+            <span className="link-text">Download CV</span>
           </Btn>
         </li>
       </ul>
