@@ -4,6 +4,7 @@ import ListItem from "../../Reusable/LisItem/ListItem";
 import NavBar from "../../Reusable/NavBar/NavBar";
 import SideMenu from "../../SideMenu/SideMenu";
 import "./nav-menu.css";
+import { FaHome } from "react-icons/fa";
 
 const MainNavMenu = ({ handleMainMenuBtnClick, setOpenedMenu }) => {
   return (
@@ -16,10 +17,10 @@ const MainNavMenu = ({ handleMainMenuBtnClick, setOpenedMenu }) => {
           return (
             <ListItem key={menuOption.id} classes={"main-menu-item"}>
               <Btn
-                classes={"btn"}
+                classes={"main-menu-btn"}
                 clickAction={() => handleMainMenuBtnClick(menuOption)}
               >
-                <p>{menuOption.label}</p>
+                {menuOption.label}
               </Btn>
             </ListItem>
           );

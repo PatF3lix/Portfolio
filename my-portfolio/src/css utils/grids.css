@@ -1,5 +1,0 @@
-.grid-row-2 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 6rem auto;
-}

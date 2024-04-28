@@ -1,5 +1,4 @@
 import "./App.css";
-import "./css utils/grids.css";
 
 import ContentSection from "./components/Sections/ContentSection/ContentSection";
 import useCurtains from "./hooks/useCurtains";
