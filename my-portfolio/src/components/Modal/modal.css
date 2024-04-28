@@ -5,6 +5,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
+  width: 30%;
+  height: 60%;
+  border-radius: 5%;
+  overflow: hidden;
 }
 
 .modal-background {
@@ -16,4 +20,17 @@
   background-color: rgba(16, 29, 38, 0.8);
   filter: blur(5px);
   z-index: 10;
+}
+
+.modal-image {
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal-image img {
+  max-width: 100%;
+  height: auto;
 }

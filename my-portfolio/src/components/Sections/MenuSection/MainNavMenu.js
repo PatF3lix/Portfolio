@@ -8,6 +8,9 @@ import "./nav-menu.css";
 const MainNavMenu = ({ handleMainMenuBtnClick }) => {
   return (
     <div className="main-menu">
+      <div className="container-logo">
+        <p className="logo">P</p>
+      </div>
       <NavBar classes={"main-menu--nav"}>
         {mainMenuOptions.map((menuOption) => {
           return (

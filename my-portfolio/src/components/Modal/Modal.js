@@ -21,6 +21,12 @@ const Modal = ({ handleModalClose, selectedProjectId }) => {
     <>
       <div className="modal-background" />
       <div className="modal-container" ref={modalRef}>
+        <div className="modal-image">
+          <img
+            src="../../data/images/chatApp.jpg"
+            alt={`project ${projectsData[selectedProjectId].name}`}
+          />
+        </div>
         <h2>{projectsData[selectedProjectId].name}</h2>
         <p>{projectsData[selectedProjectId].Description}</p>
         <button onClick={handleModalClose}>Close Modal</button>

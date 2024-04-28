@@ -1,16 +1,30 @@
 .main-menu {
   background-color: #26262e;
   grid-row: 1/2;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .main-menu--nav {
-  margin-left: auto;
-  transform: translateX(35%);
+  margin: 0 auto;
 }
 
 .main-menu-item:not(:last-child) {
   margin-right: 2rem;
+}
+
+.container-logo {
+  width: 10%;
+  height: 100%;
+  background-color: #0f3559;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 3rem;
 }
