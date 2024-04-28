@@ -3,9 +3,14 @@ import Btn from "../../Reusable/Btn/Btn";
 import ListItem from "../../Reusable/LisItem/ListItem";
 import NavBar from "../../Reusable/NavBar/NavBar";
 import SideMenu from "../../SideMenu/SideMenu";
+import { IconContext } from "react-icons";
 import "./nav-menu.css";
 
-const MainNavMenu = ({ handleMainMenuBtnClick, setOpenedMenu }) => {
+const MainNavMenu = ({
+  handleMainMenuBtnClick,
+  setOpenedMenu,
+  selectedOption,
+}) => {
   return (
     <div className="main-menu">
       <div className="container-logo">
@@ -15,13 +20,23 @@ const MainNavMenu = ({ handleMainMenuBtnClick, setOpenedMenu }) => {
         {mainMenuOptions.map((menuOption) => {
           return (
             <ListItem key={menuOption.id} classes={"main-menu-item"}>
-              <Btn
-                classes={"main-menu-btn"}
-                clickAction={() => handleMainMenuBtnClick(menuOption)}
-                altText={menuOption.label}
+              <IconContext.Provider
+                value={{
+                  color: `${
+                    selectedOption.label === menuOption.label
+                      ? "#0b799d"
+                      : "white"
+                  }`,
+                }}
               >
-                {menuOption.icon}
-              </Btn>
+                <Btn
+                  classes={"main-menu-btn"}
+                  clickAction={() => handleMainMenuBtnClick(menuOption)}
+                  altText={menuOption.label}
+                >
+                  {menuOption.icon}
+                </Btn>
+              </IconContext.Provider>
             </ListItem>
           );
         })}

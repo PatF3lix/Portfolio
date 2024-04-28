@@ -11,16 +11,16 @@ const useCurtains = (defaultOption = mainMenuOptions[0]) => {
 
     setTimeout(() => {
       setCurtainsVisible(true);
-    }, 500);
+    }, 100);
 
     setTimeout(() => {
       setSelectedOption(option);
       setCurtainsVisible(() => false);
-    }, 2200);
+    }, 1500);
 
     setTimeout(() => {
       setDisplayCurtains(false);
-    }, 3200);
+    }, 2700);
   };
 
   const handleTransitionEnd = () => {

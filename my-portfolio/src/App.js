@@ -23,6 +23,7 @@ function App() {
         handleMainMenuBtnClick={handleMainMenuBtnClick}
         openedMenu={openedMenu}
         setOpenedMenu={setOpenedMenu}
+        selectedOption={selectedOption}
       />
 
       <ContentSection>
