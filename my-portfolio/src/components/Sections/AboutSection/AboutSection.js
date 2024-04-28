@@ -44,7 +44,7 @@ const AboutSection = () => {
           classes={"btn btn-placement-right"}
           clickAction={handleDisplayText}
         >
-          Show More
+          {displayText ? "Show less" : "Show more "}
         </Btn>
       </div>
       <div className="about-me-img">

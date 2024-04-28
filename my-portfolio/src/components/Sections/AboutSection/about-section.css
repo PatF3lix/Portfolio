@@ -12,7 +12,7 @@
 
 .about-me {
   width: 100%;
-  height: 92%;
+  height: 88%;
   margin-top: 1rem;
   border-radius: 2%;
   background: linear-gradient(to bottom, #6b6b6b, #0f3559);
@@ -39,7 +39,7 @@
 }
 
 .about-me-description {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: rgb(238, 228, 228);
   margin: 1.5rem;
@@ -47,9 +47,13 @@
   line-height: 1.2;
 }
 
+.about-me-content {
+  margin-bottom: 2rem;
+}
+
 .profile-img {
-  width: 20rem;
-  height: 18rem;
+  width: 18rem;
+  height: 16rem;
   margin: 1rem auto 1.5rem auto;
   border-radius: 5%;
   background-image: url("../../../data/images/1000004764.jpg");
