@@ -13,7 +13,7 @@ const PortfolioProjects = ({ handleModalOpen }) => {
           >
             <div
               className={`portfolio-project-image portfolio-project-image-${project.id}`}
-            />
+            ></div>
             <h2 className={"card-title"}>{project.name}</h2>
           </Card>
         );

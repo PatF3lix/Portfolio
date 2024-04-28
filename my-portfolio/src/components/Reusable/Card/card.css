@@ -8,8 +8,8 @@
   height: 30rem;
   width: 30rem;
   overflow: hidden;
-  color: #a9c6c9;
   cursor: pointer;
+  color: white;
 }
 
 .contacts-card {
