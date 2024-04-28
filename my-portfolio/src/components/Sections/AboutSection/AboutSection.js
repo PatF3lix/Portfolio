@@ -47,8 +47,12 @@ const AboutSection = () => {
           {displayText ? "Show less" : "Show more "}
         </Btn>
       </div>
-      <div className="about-me-img">
-        <div className="profile-img" />
+      <div className="about-me-profile">
+        <img
+          className="profile-img"
+          alt="profile-pic"
+          src="./images/1000004764.jpg"
+        />
         <div className="professional-content">
           <div className="profesional">
             <h2 className="skill-title">Professional Skills</h2>

@@ -9,7 +9,7 @@ const useCurtains = (defaultOption = mainMenuOptions[0]) => {
   const [finishedAnimation, setFinishedAnimation] = useState(true);
 
   const handleMainMenuBtnClick = (option) => {
-    if (option.id === selectedOption.id || finishedAnimation === false) {
+    if (finishedAnimation === false) {
       return;
     }
     setFinishedAnimation(false);

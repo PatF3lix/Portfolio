@@ -11,9 +11,11 @@ const PortfolioProjects = ({ handleModalOpen }) => {
             classes={"project-card"}
             clickAction={() => handleModalOpen(project.id)}
           >
-            <div
-              className={`portfolio-project-image portfolio-project-image-${project.id}`}
-            ></div>
+            <img
+              src={`./images/${project.image}`}
+              alt={project.name}
+              className={`portfolio-project-image`}
+            ></img>
             <h2 className={"card-title"}>{project.name}</h2>
           </Card>
         );
