@@ -2,13 +2,13 @@
   background-color: #26262e;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, min-content);
   align-items: center;
   justify-content: space-between;
 }
 
 .main-menu--nav {
-  margin: 0 auto;
+  margin-right: auto;
 }
 
 .main-menu-item:not(:last-child) {
@@ -16,7 +16,8 @@
 }
 
 .container-logo {
-  width: 10%;
+  min-width: 5rem;
+  width: 5rem;
   height: 100%;
   background-color: #0f3559;
   display: flex;

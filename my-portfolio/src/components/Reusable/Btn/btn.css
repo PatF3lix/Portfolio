@@ -23,3 +23,11 @@
   border: none;
   background: transparent;
 }
+
+.slidedown-menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

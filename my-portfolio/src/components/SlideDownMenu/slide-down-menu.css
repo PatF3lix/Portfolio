@@ -1,0 +1,38 @@
+.container-slidedown {
+  background-color: #fff;
+  z-index: 30;
+  position: absolute;
+  top: 6rem;
+  right: 0;
+  width: 20rem;
+  background-color: #17171c;
+}
+
+.slidedown-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu-option {
+  margin-bottom: 1.5rem;
+}
+
+.menu-option:not(:last-child) {
+  text-align: center;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.5rem;
+  width: 90%;
+}
+
+.menu-option:nth-child(1) {
+  margin-top: 1.5rem;
+}
+
+.slidedown-menu-link {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}

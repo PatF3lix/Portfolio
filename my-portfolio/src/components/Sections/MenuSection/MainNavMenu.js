@@ -2,10 +2,10 @@ import mainMenuOptions from "../../../data/MainMenuOptions";
 import Btn from "../../Reusable/Btn/Btn";
 import ListItem from "../../Reusable/LisItem/ListItem";
 import NavBar from "../../Reusable/NavBar/NavBar";
-import SocialNavHub from "../../SocialNavHub/SocialNavHub";
+import SideMenu from "../../SideMenu/SideMenu";
 import "./nav-menu.css";
 
-const MainNavMenu = ({ handleMainMenuBtnClick }) => {
+const MainNavMenu = ({ handleMainMenuBtnClick, setOpenedMenu }) => {
   return (
     <div className="main-menu">
       <div className="container-logo">
@@ -25,7 +25,7 @@ const MainNavMenu = ({ handleMainMenuBtnClick }) => {
           );
         })}
       </NavBar>
-      <SocialNavHub />
+      <SideMenu setOpenedMenu={setOpenedMenu} />
     </div>
   );
 };
