@@ -6,8 +6,13 @@ const useCurtains = (defaultOption = mainMenuOptions[0]) => {
   const [selectedOption, setSelectedOption] = useState(defaultOption);
   const [displayCurtains, setDisplayCurtains] = useState(false);
   const [optionId, setOptionId] = useState(defaultOption.id);
+  const [finishedAnimation, setFinishedAnimation] = useState(true);
 
   const handleMainMenuBtnClick = (option) => {
+    if (option.id === selectedOption.id || finishedAnimation === false) {
+      return;
+    }
+    setFinishedAnimation(false);
     setDisplayCurtains(true);
     setOptionId(option.id);
 
@@ -23,6 +28,10 @@ const useCurtains = (defaultOption = mainMenuOptions[0]) => {
     setTimeout(() => {
       setDisplayCurtains(false);
     }, 2700);
+
+    setTimeout(() => {
+      setFinishedAnimation(true);
+    }, 2900);
   };
 
   const handleTransitionEnd = () => {
