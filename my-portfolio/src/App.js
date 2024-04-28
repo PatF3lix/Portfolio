@@ -15,6 +15,7 @@ function App() {
     handleMainMenuBtnClick,
     handleTransitionEnd,
     displayCurtains,
+    optionId,
   } = useCurtains();
 
   return (
@@ -23,7 +24,7 @@ function App() {
         handleMainMenuBtnClick={handleMainMenuBtnClick}
         openedMenu={openedMenu}
         setOpenedMenu={setOpenedMenu}
-        selectedOption={selectedOption}
+        selectedOption={optionId}
       />
 
       <ContentSection>

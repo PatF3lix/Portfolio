@@ -23,9 +23,7 @@ const MainNavMenu = ({
               <IconContext.Provider
                 value={{
                   color: `${
-                    selectedOption.label === menuOption.label
-                      ? "#0b799d"
-                      : "white"
+                    selectedOption === menuOption.id ? "#0b799d" : "white"
                   }`,
                 }}
               >
