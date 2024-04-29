@@ -23,15 +23,15 @@ const useCurtains = (defaultOption = mainMenuOptions[0]) => {
     setTimeout(() => {
       setSelectedOption(option);
       setCurtainsVisible(() => false);
-    }, 1500);
+    }, 1700);
 
     setTimeout(() => {
       setDisplayCurtains(false);
-    }, 2700);
+    }, 2600);
 
     setTimeout(() => {
       setFinishedAnimation(true);
-    }, 2900);
+    }, 2700);
   };
 
   const handleTransitionEnd = () => {
