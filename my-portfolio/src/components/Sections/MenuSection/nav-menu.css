@@ -14,13 +14,19 @@
   align-self: end;
 }
 
+@media only screen and (max-width: 500px) {
+  .main-menu--nav {
+    align-self: center;
+  }
+}
+
 .main-menu-item {
   width: 5rem;
   text-align: center;
 }
 
 .container-logo {
-  min-width: 5rem;
+  min-width: 4rem;
   width: 5rem;
   height: 100%;
   background-color: #0f3559;
@@ -32,4 +38,13 @@
 .logo {
   color: white;
   font-size: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-logo {
+    width: 4rem;
+  }
+  .logo {
+    font-size: 2rem;
+  }
 }
