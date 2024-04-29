@@ -7,9 +7,6 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 900px) {
-}
-
 .portfolio-title {
   font-size: 8rem;
   font-weight: 700;
@@ -18,6 +15,12 @@
   margin-top: 2rem;
   text-transform: uppercase;
   opacity: 0.2;
+}
+
+@media only screen and (max-width: 600px) {
+  .portfolio-title {
+    font-size: 7rem;
+  }
 }
 
 .portfolio-projects-list {
@@ -39,15 +42,16 @@
   .portfolio-projects-list {
     grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
     gap: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
-@media only screen and (min-width: 1300px) {
+/* @media only screen and (min-width: 1400px) {
   .portfolio-projects-list {
-    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
+    margin-bottom: 2rem;
   }
-}
+} */
 
 .portfolio-project-image {
   height: 85%;

@@ -6,6 +6,7 @@ import Curtains from "./components/Curtains/Curtains";
 import MainNavMenu from "./components/Sections/MenuSection/MainNavMenu";
 import SlideDownMenu from "./components/SlideDownMenu/SlideDownMenu";
 import { useState } from "react";
+import useScreenWidth from "./hooks/useScreenWidth";
 
 function App() {
   const [openedMenu, setOpenedMenu] = useState(false);
@@ -17,6 +18,9 @@ function App() {
     displayCurtains,
     optionId,
   } = useCurtains();
+  /*custom hook to calculate the client screen width at all times,
+   to assert how many curtains there should be*/
+  const screenWidth = useScreenWidth();
 
   return (
     <div id="app" className="app grid-row-2">
@@ -35,6 +39,7 @@ function App() {
         <Curtains
           curtainsVisible={curtainsVisible}
           handleTransitionEnd={handleTransitionEnd}
+          screenWidth={screenWidth}
         />
       )}
     </div>

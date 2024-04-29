@@ -8,6 +8,24 @@
   height: 100%;
 }
 
+@media only screen and (max-width: 900px) {
+  .curtain-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .curtain-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .curtain-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 .curtain {
   width: 0;
   height: 100%;
@@ -17,7 +35,6 @@
 
 .c-1 {
   grid-column: 1/2;
-  grid-row: 1/-1;
 }
 
 .c-2 {
