@@ -21,7 +21,6 @@
 
 /* hero element styles */
 .presentational-info {
-  font-size: 4rem;
   color: whitesmoke;
   margin: 15rem auto;
   grid-column: 1/2;
@@ -48,6 +47,68 @@
   margin-bottom: 1rem;
   line-height: 2.5rem;
   line-height: 1.5;
+}
+
+@media only screen and (max-width: 900px) {
+  .hero-name {
+    font-size: 6rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-intro {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .hero-name {
+    font-size: 6rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-intro {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-name {
+    font-size: 5rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-intro {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-name {
+    font-size: 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-intro {
+    font-size: 0.8rem;
+  }
 }
 
 .welcome {
