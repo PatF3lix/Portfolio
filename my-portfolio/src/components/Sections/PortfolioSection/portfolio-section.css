@@ -46,12 +46,12 @@
   }
 }
 
-/* @media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1300px) {
   .portfolio-projects-list {
-    grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     margin-bottom: 2rem;
   }
-} */
+}
 
 .portfolio-project-image {
   height: 85%;
