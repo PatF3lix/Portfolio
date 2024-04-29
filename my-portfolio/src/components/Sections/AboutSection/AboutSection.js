@@ -11,11 +11,6 @@ const AboutSection = () => {
 
   const handleDisplayText = () => {
     setDisplayText((visibility) => !visibility);
-    if (!displayText) {
-      aboutMeRef.current.style.height = "100%";
-    } else {
-      aboutMeRef.current.style.height = "92%";
-    }
   };
 
   return (
@@ -40,10 +35,7 @@ const AboutSection = () => {
                   </p>
                 ))}
         </div>
-        <Btn
-          classes={"btn btn-placement-right"}
-          clickAction={handleDisplayText}
-        >
+        <Btn classes={"about-me-btn"} clickAction={handleDisplayText}>
           {displayText ? "Show less" : "Show more "}
         </Btn>
       </div>

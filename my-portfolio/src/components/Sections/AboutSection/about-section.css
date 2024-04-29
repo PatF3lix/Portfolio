@@ -1,6 +1,6 @@
 .about-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min-content, 65rem));
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 50rem));
   grid-template-rows: auto;
   background: linear-gradient(to bottom, #08233c, #536575, #21214a);
   justify-content: center;
@@ -12,7 +12,7 @@
 
 .about-me {
   width: 100%;
-  height: 88%;
+  height: 100%;
   margin-top: 1rem;
   border-radius: 2%;
   background: linear-gradient(to bottom, #6b6b6b, #0f3559);
@@ -21,8 +21,14 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 
+@media only screen and (max-width: 1060px) {
+  .about-me {
+    height: 100%;
+  }
+}
+
 .about-me-title {
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 700;
   color: #cce5e7;
   text-align: center;
@@ -36,6 +42,7 @@
   font-weight: 700;
   color: #a8dae0;
   margin: 1.5rem;
+  margin-top: 3.5rem;
 }
 
 .about-me-description {
@@ -55,8 +62,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 .profile-img {
