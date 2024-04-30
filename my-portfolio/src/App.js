@@ -33,7 +33,7 @@ function App() {
 
       <ContentSection>
         {selectedOption.content}
-        {openedMenu && <SlideDownMenu />}
+        <SlideDownMenu openedMenu={openedMenu} />
       </ContentSection>
       {displayCurtains && (
         <Curtains

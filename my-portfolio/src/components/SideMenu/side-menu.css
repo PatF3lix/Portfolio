@@ -38,3 +38,13 @@
 .side-menu-open .line:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -5px);
 }
+
+@media only screen and (max-width: 768px) {
+  .side-menu-open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .side-menu-open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

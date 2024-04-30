@@ -1,11 +1,30 @@
 .container-slidedown {
   background-color: #fff;
   z-index: 30;
-  position: absolute;
+  position: fixed;
   top: 5rem;
-  right: 0;
+  right: -20rem;
   width: 20rem;
   background-color: #17171c;
+  transition: all 0.4s ease-in;
+  visibility: 0;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-slidedown {
+    top: 3.5rem;
+  }
+}
+
+.container-slideIn {
+  transform: translateX(-20rem);
+  visibility: 1;
+  opacity: 1;
+}
+
+.container-slideOut {
+  transform: translateX(15%);
 }
 
 .slidedown-menu {

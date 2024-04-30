@@ -6,10 +6,14 @@ import { FaDownload } from "react-icons/fa6";
 
 import "./slide-down-menu.css";
 
-const SlideDownMenu = () => {
+const SlideDownMenu = ({ openedMenu }) => {
   const { handleDownload } = useDownloadCv();
   return (
-    <div className="container-slidedown">
+    <div
+      className={`container-slidedown ${
+        openedMenu ? "container-slideIn" : "container-slideOut"
+      }`}
+    >
       <ul className="slidedown-menu">
         <li className="menu-option">
           <a
