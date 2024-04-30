@@ -13,7 +13,7 @@
 .grid-row-2 {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 5rem auto;
+  grid-template-rows: 6rem auto;
 }
 
 @media only screen and (max-width: 768px) {
