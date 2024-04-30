@@ -16,26 +16,30 @@ const SlideDownMenu = ({ openedMenu }) => {
     >
       <ul className="slidedown-menu">
         <li className="menu-option">
-          <a
-            className="slidedown-menu-link"
-            href={process.env.REACT_APP_GITHUB_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-            <span className="link-text">GitHub Page</span>
-          </a>
+          <Btn classes={"side-menu-btn"}>
+            <a
+              className="slidedown-menu-link"
+              href={process.env.REACT_APP_GITHUB_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub />
+              <span className="link-text">GitHub Page</span>
+            </a>
+          </Btn>
         </li>
         <li className="menu-option">
-          <a
-            className="slidedown-menu-link"
-            href={process.env.REACT_APP_LINKEDIN_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedin />
-            <span className="link-text">LinkedIn Account</span>
-          </a>
+          <Btn classes={"side-menu-btn"}>
+            <a
+              className="slidedown-menu-link"
+              href={process.env.REACT_APP_LINKEDIN_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+              <span className="link-text">LinkedIn Account</span>
+            </a>
+          </Btn>
         </li>
         <li className="menu-option">
           <Btn classes="slidedown-menu-btn" clickAction={handleDownload}>

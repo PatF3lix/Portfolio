@@ -16,7 +16,7 @@ const PortfolioProjects = ({ handleModalOpen }) => {
               alt={project.name}
               className={`portfolio-project-image`}
             ></img>
-            <h2 className={"card-title"}>{project.name}</h2>
+            <h2 className={"prj-card-title"}>{project.name}</h2>
           </Card>
         );
       })}

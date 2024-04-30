@@ -88,3 +88,8 @@
 .main-menu-btn:active {
   transform: translateY(0);
 }
+
+.side-menu-btn {
+  background: transparent;
+  border: none;
+}

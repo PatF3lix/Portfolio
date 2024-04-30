@@ -16,7 +16,7 @@
 .github-link,
 .live-demo-link {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .modal-project-description {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   padding: 2rem;
   padding-top: 1rem;
   letter-spacing: 0.1rem;
@@ -59,6 +59,7 @@
 .modal-h3 {
   align-self: flex-start;
   margin-left: 2rem;
+  font-size: 2rem;
 }
 
 .modal-link-btn {
@@ -70,7 +71,7 @@
 .modal-feature {
   margin: 1.2rem auto;
   padding: 0 1.5rem;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 /* .modal-image {

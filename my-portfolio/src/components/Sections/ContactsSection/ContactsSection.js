@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const sendDataToBackend = async (values) => {
   try {
-    const response = await fetch("http://localhost:5000/send-email", {
+    const response = await fetch("https://backend.example.com/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
