@@ -1,36 +1,32 @@
 import "./contacts-section.css";
-import Btn from "../../Reusable/Btn/Btn";
-import { useState } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const sendDataToBackend = async (values) => {
+  try {
+    const response = await fetch("http://localhost:5000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
+    const result = await response.json();
+    return result;
+  } catch (err) {
+    throw new ErrorMessage("Failed to send message. Please try again.");
+  }
+};
 
 const ContactsSection = () => {
-  const [fullName, setfullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = {
-      fullName,
-      email,
-      message,
-    };
-
-    //send data to backend
+  const handleSubmit = async (values) => {
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      const result = await response.json();
-      //here a message should be sent to the user alerting him that the message was sent
-      //successfully
-      console.log(result);
+      await sendDataToBackend(values);
+      toast.success("Message sent successfully!");
     } catch (err) {
-      //here a message should be sent to the user alerting him that the message was not sent
-      console.log(err);
+      toast.error("Failed to send message. Please try agian.");
     }
   };
 
@@ -43,40 +39,60 @@ const ContactsSection = () => {
           back to you as soon as possible
         </p>
         <div className="contact-form-container">
-          <form>
-            <label htmlFor="name">Full Name</label>
-            <input
-              value={fullName}
-              onChange={(e) => setfullName(e.currentTarget.value)}
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Full Name"
-            />
-            <label htmlFor="email">Email</label>
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.currentTarget.value)}
-              type="email"
-              name="email"
-              id="email"
-              placeholder="example@gmail.com"
-            />
-            <label htmlFor="message">Your message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              value={message}
-              onChange={(e) => setMessage(e.currentTarget.value)}
-              placeholder="Your message goes here..."
-            ></textarea>
-            <br />
-            <Btn clickAction={handleSubmit} classes={"btn"}>
-              Submit
-            </Btn>
-          </form>
+          <ToastContainer
+            position="top-center"
+            gutter={12}
+            containerStyle={{ margin: "8px" }}
+            toastOptions={{
+              success: {
+                duration: 3000,
+              },
+              error: {
+                duration: 5000,
+              },
+              style: {
+                fontSize: "16px",
+                maxWidth: "500px",
+                padding: "16px 24px",
+              },
+            }}
+          />
+          <Formik
+            initialValues={{ fullName: "", email: "", message: "" }}
+            validationSchema={Yup.object().shape({
+              fullName: Yup.string()
+                .matches(/^[a-zA-Z ]*$/, "Full name must not contain numbers")
+                .required("Full name is required"),
+              email: Yup.string()
+                .email("Invalid email address")
+                .required("Email is required"),
+              message: Yup.string().required("Message is required"),
+            })}
+            onSubmit={handleSubmit}
+          >
+            {({ isSubmitting }) => (
+              <Form>
+                <div>
+                  <label htmlFor="fullName">Full Name</label>
+                  <Field type="text" name="fullName" />
+                  <ErrorMessage name="fullName" component="div" />
+                </div>
+                <div>
+                  <label htmlFor="email">Email</label>
+                  <Field type="email" name="email" />
+                  <ErrorMessage name="email" component="div" />
+                </div>
+                <div>
+                  <label htmlFor="message">Message</label>
+                  <Field as="textarea" name="message" />
+                  <ErrorMessage name="message" component="div" />
+                </div>
+                <button type="submit" disabled={isSubmitting}>
+                  Submit
+                </button>
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
     </section>
