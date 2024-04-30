@@ -1,34 +1,41 @@
 .contact-section {
   display: grid;
   grid-template-columns: minmax(min-content, 1fr);
+  grid-template-rows: min-content;
   justify-content: center;
-  align-items: center;
   background: linear-gradient(to bottom, #08233c, #536575, #21214a);
-  gap: 7rem;
   height: 100%;
 }
 
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.contact-container-intro {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a8dae0;
+  margin: 2rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #cce5e7;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.2;
+  margin-bottom: 2rem;
 }
 
 .contact-form-container {
   min-width: 25%;
-  height: 60%;
-  margin: 2rem auto;
+  height: 40rem;
+  margin: 0 auto;
+  margin-top: 2rem;
   padding: 2rem 2rem;
   border-radius: 5%;
-  background: linear-gradient(to bottom, #6b6b6b, #0f3559);
+  background: linear-gradient(to bottom, #6b6b6b, #184269);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   color: #cce5e7;
   font-size: 1.5rem;
-}
-
-.contact-form-container form {
-  display: flex;
-  flex-direction: column;
 }
 
 .contact-form-container label {
@@ -38,30 +45,40 @@
 
 .contact-form-container input {
   width: 90%;
-  margin-bottom: 1.5rem;
+  height: 2.5rem;
+  margin-bottom: 2.5rem;
 }
+
+.form-field {
+  position: relative;
+}
+
+.error-text,
+.error-text-textarea {
+  position: absolute;
+  top: 70%;
+  font-size: 1.2rem;
+  padding-left: 2rem;
+  color: red;
+  font-weight: 700;
+}
+
+.error-text-textarea {
+  top: 90%;
+}
+
 .contact-form-container textarea {
   margin-bottom: 1.5rem;
   width: 90%;
+  height: 12rem;
 }
 
-.contact-form-container .btn {
-  align-self: flex-end;
+.contact-form {
+  position: relative;
 }
 
-.contact-container-title {
-  font-size: 8rem;
-  font-weight: 700;
-  color: #cce5e7;
-  text-align: center;
-  text-transform: uppercase;
-  opacity: 0.2;
-}
-
-.contact-container-intro {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #a8dae0;
-  margin: 1.5rem;
-  text-align: center;
+.contact-form-container form .btn {
+  position: absolute;
+  bottom: -20%;
+  right: 0;
 }
