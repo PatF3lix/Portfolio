@@ -1,6 +1,6 @@
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(min-content, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: min-content;
   justify-content: center;
   background: linear-gradient(to bottom, #08233c, #536575, #21214a);

@@ -29,12 +29,6 @@ const Modal = ({ handleModalClose, selectedProjectId }) => {
           <h2 className="modal-project-title">
             {projectsData[selectedProjectId].name}
           </h2>
-          {/* <div className="modal-image">
-            <img
-              src={`./images/${projectsData[selectedProjectId].image}`}
-              alt={`project ${projectsData[selectedProjectId].name}`}
-            />
-          </div> */}
           <h2 className="modal-h3">Project Description:</h2>
           <p className="modal-project-description">
             {projectsData[selectedProjectId].Description}
@@ -48,14 +42,25 @@ const Modal = ({ handleModalClose, selectedProjectId }) => {
             );
           })}
           <div className="modal-link-btn">
-            <Btn classes={"btn"} clickAction={() => console.log("github link")}>
-              <p>Github</p>
+            <Btn classes={"btn"}>
+              <a
+                className="github-link"
+                target="_blank"
+                rel="noreferrer"
+                href={projectsData[selectedProjectId].github}
+              >
+                Github
+              </a>
             </Btn>
-            <Btn
-              classes={"btn"}
-              clickAction={() => console.log("Live Demo link")}
-            >
-              <p>Live Demo</p>
+            <Btn classes={"btn"}>
+              <a
+                className="live-demo-link"
+                target="_blank"
+                rel="noreferrer"
+                href={"#"}
+              >
+                Live Demo
+              </a>
             </Btn>
           </div>
         </div>
