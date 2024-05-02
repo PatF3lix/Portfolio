@@ -4,8 +4,8 @@ import "./profesional-skill-card.css";
 
 const ProfessionalSkillCard = () => {
   return (
-    <Card classes={"profesionalSkillsCard"}>
-      <div>
+    <Card classes={"skillsCard"}>
+      <div className="skill-category">
         <h2 className="card-title-skill">HTML/CSS/JS</h2>
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
@@ -13,7 +13,7 @@ const ProfessionalSkillCard = () => {
           fillPercentage={"fillPercentage-80"}
         />
       </div>
-      <div>
+      <div className="skill-category">
         <h2 className="card-title-skill">React/NodeJs</h2>
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
@@ -21,7 +21,7 @@ const ProfessionalSkillCard = () => {
           fillPercentage={"fillPercentage-80"}
         />
       </div>
-      <div>
+      <div className="skill-category">
         <h2 className="card-title-skill">Python/Django</h2>
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
@@ -29,7 +29,7 @@ const ProfessionalSkillCard = () => {
           fillPercentage={"fillPercentage-60"}
         />
       </div>
-      <div>
+      <div className="skill-category">
         <h2 className="card-title-skill">DevOps</h2>
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
@@ -37,7 +37,7 @@ const ProfessionalSkillCard = () => {
           fillPercentage={"fillPercentage-50"}
         />
       </div>
-      <div>
+      <div className="skill-category">
         <h2 className="card-title-skill">C/C++</h2>
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}
@@ -45,7 +45,7 @@ const ProfessionalSkillCard = () => {
           fillPercentage={"fillPercentage-60"}
         />
       </div>
-      <div>
+      <div className="skill-category">
         <h2 className="card-title-skill">CyberSecurity</h2>
         <FillMeter
           meterBgColor={"fill-meter-bg-red"}

@@ -4,9 +4,10 @@ import * as Yup from "yup";
 import "./contacts-section.css";
 import "react-toastify/dist/ReactToastify.css";
 
+// Client-side code (e.g., in your React app)
 const sendDataToBackend = async (values) => {
   try {
-    const response = await fetch("https://backend.example.com/send-email", {
+    const response = await fetch(process.env.REACT_APP_API_HOST, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,6 +17,7 @@ const sendDataToBackend = async (values) => {
     const result = await response.json();
     return result;
   } catch (err) {
+    console.error(err); // Logging the error for debugging purposes
     throw new ErrorMessage("Failed to send message. Please try again.");
   }
 };
@@ -25,7 +27,7 @@ const handleSubmit = async (values) => {
     await sendDataToBackend(values);
     toast.success("Message sent successfully!");
   } catch (err) {
-    toast.error("Failed to send message. Please try agian.");
+    toast.error("Failed to send message. Please try again.");
   }
 };
 
@@ -36,7 +38,7 @@ const ContactsSection = () => {
         <h1 className={"contact-title"}>Contact</h1>
         <p className={"contact-text"}>
           Feel free to Contact me by submitting the form below and I will get
-          back to you as soon as possible
+          back to you as soon as possible.
         </p>
       </div>
       <div className="contact-form-container">

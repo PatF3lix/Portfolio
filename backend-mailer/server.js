@@ -6,13 +6,11 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-//middleware
+// Middleware
 app.use(express.json());
-
-//this needs to be changed to only accept requests from front end client.
 app.use(cors());
 
-//Nodemailer transport setup
+// Nodemailer transport setup
 const transporter = nodemailer.createTransport({
   service: "gmail",
   host: "smtp.gmail.com",
@@ -46,6 +44,11 @@ app.post("/send-email", (req, res) => {
         .json({ success: true, message: "Email sent successfully" });
     }
   });
+});
+
+// Route for testing GET request
+app.get("/", (req, res) => {
+  res.send("This is a test route. Server is up and running!");
 });
 
 app.listen(PORT, () => {

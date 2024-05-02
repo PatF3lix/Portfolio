@@ -5,7 +5,7 @@ import PersonalSkillCard from "../../PersonalSkillCard/PersonalSkillCard";
 import aboutMeText from "../../../data/AboutMeText";
 import Btn from "../../Reusable/Btn/Btn";
 
-const AboutSection = () => {
+const AboutSection = ({ screenWidth }) => {
   const [displayText, setDisplayText] = useState(false);
   const aboutMeRef = useRef(null);
 
@@ -16,7 +16,7 @@ const AboutSection = () => {
   return (
     <section className="about-section">
       <div ref={aboutMeRef} className="about-me">
-        <h1 className="about-me-title">About Me</h1>
+        {screenWidth > 900 && <h1 className="about-me-title">About Me</h1>}
         <div className="about-me-content">
           <h2 className="about-me-intro">Hey there, I&apos;m Patrick,</h2>
           {displayText
@@ -40,6 +40,7 @@ const AboutSection = () => {
         </Btn>
       </div>
       <div className="about-me-profile">
+        {screenWidth < 900 && <h1 className="about-me-title">About Me</h1>}
         <img
           className="profile-img"
           alt="profile-pic"

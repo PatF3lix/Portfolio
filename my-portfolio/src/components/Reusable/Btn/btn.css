@@ -8,6 +8,26 @@
   cursor: pointer;
 }
 
+.hero-btn {
+  margin-top: 2rem;
+  width: 15rem;
+}
+
+.hero-btn-text {
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .hero-btn {
+    margin-top: 2rem;
+    width: 10rem;
+  }
+
+  .hero-btn-text {
+    font-size: 1.4rem;
+  }
+}
+
 .about-me-btn {
   font-size: 1.5rem;
   font-weight: 400;
@@ -92,4 +112,5 @@
 .side-menu-btn {
   background: transparent;
   border: none;
+  cursor: pointer;
 }

@@ -1,12 +1,14 @@
 import "./App.css";
 
+import { useState } from "react";
 import ContentSection from "./components/Sections/ContentSection/ContentSection";
 import useCurtains from "./hooks/useCurtains";
 import Curtains from "./components/Curtains/Curtains";
 import MainNavMenu from "./components/Sections/MenuSection/MainNavMenu";
 import SlideDownMenu from "./components/SlideDownMenu/SlideDownMenu";
-import { useState } from "react";
 import useScreenWidth from "./hooks/useScreenWidth";
+import HeroSection from "./components/Sections/HeroSection/HeroSection";
+import AboutSection from "./components/Sections/AboutSection/AboutSection";
 
 function App() {
   const [openedMenu, setOpenedMenu] = useState(false);
@@ -32,7 +34,13 @@ function App() {
       />
 
       <ContentSection>
-        {selectedOption.content}
+        {selectedOption.id === 1 ? (
+          <HeroSection handleMainMenuBtnClick={handleMainMenuBtnClick} />
+        ) : selectedOption.id === 2 ? (
+          <AboutSection screenWidth={screenWidth} />
+        ) : (
+          selectedOption.content
+        )}
         <SlideDownMenu openedMenu={openedMenu} />
       </ContentSection>
       {displayCurtains && (
