@@ -24,6 +24,7 @@ const sendDataToBackend = async (values) => {
 
 const handleSubmit = async (values) => {
   try {
+    toast.success("Sending Message!");
     await sendDataToBackend(values);
     toast.success("Message sent successfully!");
   } catch (err) {
@@ -105,7 +106,7 @@ const ContactsSection = () => {
                 />
               </div>
               <button className="btn" type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Sending Message" : "Submit"}
+                {isSubmitting ? "Sending..." : "Submit"}
               </button>
             </Form>
           )}
