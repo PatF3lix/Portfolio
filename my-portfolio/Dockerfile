@@ -17,5 +17,5 @@ WORKDIR /app
 
 COPY --from=builder /app .
 
-CMD npm run build && npm run start:prod
+CMD npm run start:prod
 

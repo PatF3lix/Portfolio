@@ -14,9 +14,9 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-    "start:dev": "webpack serve --mode development --open --port 3000",
-    "start:prod": "serve -s build -l 3000",
-    "build": "webpack --mode production",
+    "start:dev": "parcel serve public/index.html --port 3000",
+    "start:prod": "parcel build public/index.html && serve dist --port 3000",
+    "build": "parcel build public/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,13 +50,10 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-refresh": "^0.4.6",
     "globals": "^15.0.0",
-    "html-webpack-plugin": "^5.6.0",
+    "parcel-bundler": "^1.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "serve": "^14.2.3",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "style-loader": "^4.0.0"
   }
 }
