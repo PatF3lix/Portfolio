@@ -1,5 +1,5 @@
-import Btn from "../../Reusable/Btn/Btn";
 import "./hero-section.css";
+import Btn from "../../Reusable/Btn/Btn";
 import mainMenuOptions from "../../../data/MainMenuOptions";
 
 const HeroSection = ({ handleMainMenuBtnClick }) => {

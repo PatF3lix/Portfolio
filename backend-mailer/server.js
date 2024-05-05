@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 const allowedOrigins = [
-  `http://${process.env.ALLOWED_IP_ADDRESS}`,
   `https://${process.env.ALLOWED_IP_ADDRESS}`,
 ];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1) {
+    console.log(origin);
+    if (origin != null && allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
