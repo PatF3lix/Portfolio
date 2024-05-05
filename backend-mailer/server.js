@@ -9,13 +9,10 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(express.json());
 
-const allowedOrigins = [
-  `https://${process.env.ALLOWED_IP_ADDRESS}`,
-];
+const allowedOrigins = [process.env.ALLOWED_IP_ADDRESS];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    console.log(origin);
     if (origin != null && allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
