@@ -1,37 +1,40 @@
 .about-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min-content, 60rem));
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   background: linear-gradient(to bottom, #08233c, #536575, #21214a);
   justify-content: center;
   height: 100%;
   width: 100%;
-  gap: 2rem;
   padding-bottom: 2rem;
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (max-width: 900px) {
   .about-section {
-    gap: 8rem;
-  }
-}
-
-@media only screen and (min-width: 1500px) {
-  .about-section {
-    gap: 10rem;
+    grid-template-columns: 1fr;
   }
 }
 
 .about-me {
   margin: 2rem;
   margin-top: 6rem;
-  border-radius: 2%;
   background: linear-gradient(to bottom, #6b6b6b, #0f3559);
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-  height: fit-content;
+  height: min-content;
+  width: 70%;
+  min-width: 50rem;
   padding: 2rem;
+  justify-self: right;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-me {
+    justify-self: center;
+    width: 90%;
+    min-width: min-content;
+  }
 }
 
 .about-me-title {
@@ -44,9 +47,21 @@
   opacity: 0.2;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .about-me-title {
     font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about-me-title {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .about-me-title {
+    font-size: 4rem;
   }
 }
 
@@ -60,12 +75,12 @@
 
 @media only screen and (max-width: 600px) {
   .about-me-intro {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
 
 .about-me-description {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: rgb(238, 228, 228);
   margin: 1.5rem;
@@ -80,15 +95,31 @@
 .about-me-profile {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-width: min-content;
+  width: 50%;
+  margin-left: 15rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .about-me-profile {
+    margin-left: 0;
+    justify-self: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about-me-profile {
+    grid-row: 1/2;
+  }
 }
 
 .profile-img {
-  width: 17rem;
-  height: 20rem;
+  width: 20rem;
+  height: 23rem;
   margin: 1rem 0;
   border-radius: 5%;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
   margin-top: 6rem;
 }
 
@@ -100,16 +131,15 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .profile-img {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
 .professional-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min-content, 75rem));
+  grid-template-rows: repeat(2, 1fr);
   grid-column: auto;
-}
-
-.profesional {
-  justify-self: center;
-}
-
-.personal {
-  justify-self: center;
 }

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_portfolio=self.webpackChunkmy_portfolio||[]).push([[697],{697:(e,n,t)=>{t.r(n),t.d(n,{default:()=>r});var i=t(6540);const r=function(){const[e,n]=(0,i.useState)(window.innerWidth);return(0,i.useEffect)((()=>{const e=()=>{n(window.innerWidth)};return window.addEventListener("resize",e),()=>{window.removeEventListener("resize",e)}}),[]),e}}}]);

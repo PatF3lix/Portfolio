@@ -5,12 +5,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  width: 35%;
-  height: 75%;
+  width: 65%;
+  height: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 35rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .modal-container-inner,
+  .modal-container-outer {
+    width: 85%;
+    height: 75%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .modal-container-inner,
+  .modal-container-outer {
+    width: 55%;
+    height: 65%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .modal-container-inner,
+  .modal-container-outer {
+    width: 45%;
+    height: 65%;
+  }
 }
 
 .github-link,
@@ -49,6 +72,13 @@
   margin: 3rem auto;
 }
 
+@media only screen and (max-width: 500px) {
+  .modal-project-title {
+    font-size: 2.2rem;
+    margin: 3rem auto;
+  }
+}
+
 .modal-project-description {
   font-size: 1.8rem;
   padding: 2rem;
@@ -56,10 +86,22 @@
   letter-spacing: 0.1rem;
 }
 
+@media only screen and (max-width: 500px) {
+  .modal-project-description {
+    font-size: 1.4rem;
+  }
+}
+
 .modal-h3 {
   align-self: flex-start;
   margin-left: 2rem;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .modal-h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .modal-link-btn {
@@ -74,18 +116,8 @@
   font-size: 1.8rem;
 }
 
-/* .modal-image {
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media only screen and (max-width: 500px) {
+  .modal-feature {
+    font-size: 1.4rem;
+  }
 }
-
-.modal-image img {
-  height: 100%;
-  width: 50%;
-} */

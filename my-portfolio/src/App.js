@@ -1,12 +1,29 @@
 import "./App.css";
 
-import ContentSection from "./components/Sections/ContentSection/ContentSection";
+import React from "react";
+import { useState, Suspense, lazy } from "react";
 import useCurtains from "./hooks/useCurtains";
-import Curtains from "./components/Curtains/Curtains";
-import MainNavMenu from "./components/Sections/MenuSection/MainNavMenu";
-import SlideDownMenu from "./components/SlideDownMenu/SlideDownMenu";
-import { useState } from "react";
 import useScreenWidth from "./hooks/useScreenWidth";
+// Lazy-loaded components
+const ContentSection = lazy(() =>
+  import("./components/Sections/ContentSection/ContentSection")
+);
+
+const Curtains = lazy(() => import("./components/Curtains/Curtains"));
+
+const MainNavMenu = lazy(() =>
+  import("./components/Sections/MenuSection/MainNavMenu")
+);
+const SlideDownMenu = lazy(() =>
+  import("./components/SlideDownMenu/SlideDownMenu")
+);
+
+const HeroSection = lazy(() =>
+  import("./components/Sections/HeroSection/HeroSection")
+);
+const AboutSection = lazy(() =>
+  import("./components/Sections/AboutSection/AboutSection")
+);
 
 function App() {
   const [openedMenu, setOpenedMenu] = useState(false);
@@ -24,24 +41,34 @@ function App() {
 
   return (
     <div id="app" className="app grid-row-2">
-      <MainNavMenu
-        handleMainMenuBtnClick={handleMainMenuBtnClick}
-        openedMenu={openedMenu}
-        setOpenedMenu={setOpenedMenu}
-        selectedOption={optionId}
-      />
-
-      <ContentSection>
-        {selectedOption.content}
-        <SlideDownMenu openedMenu={openedMenu} />
-      </ContentSection>
-      {displayCurtains && (
-        <Curtains
-          curtainsVisible={curtainsVisible}
-          handleTransitionEnd={handleTransitionEnd}
-          screenWidth={screenWidth}
+      {/* Suspense component to handle lazy loading */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <MainNavMenu
+          handleMainMenuBtnClick={handleMainMenuBtnClick}
+          openedMenu={openedMenu}
+          setOpenedMenu={setOpenedMenu}
+          selectedOption={optionId}
         />
-      )}
+
+        <ContentSection>
+          {selectedOption.id === 1 ? (
+            <HeroSection handleMainMenuBtnClick={handleMainMenuBtnClick} />
+          ) : selectedOption.id === 2 ? (
+            <AboutSection screenWidth={screenWidth} />
+          ) : (
+            selectedOption.content
+          )}
+          <SlideDownMenu openedMenu={openedMenu} />
+        </ContentSection>
+
+        {displayCurtains && (
+          <Curtains
+            curtainsVisible={curtainsVisible}
+            handleTransitionEnd={handleTransitionEnd}
+            screenWidth={screenWidth}
+          />
+        )}
+      </Suspense>
     </div>
   );
 }

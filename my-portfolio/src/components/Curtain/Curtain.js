@@ -1,3 +1,4 @@
+import React from "react";
 import "./Curtains.css";
 
 const Curtain = ({ classes, handleTransitionEnd }) => {

@@ -1,3 +1,4 @@
+import React from "react";
 import "./side-menu.css";
 
 const SideMenu = ({ setOpenedMenu }) => {

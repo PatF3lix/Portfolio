@@ -1,3 +1,4 @@
+import React from "react";
 import "./modal.css";
 import projectsData from "../../data/ProjectsData";
 import { useEffect, useRef } from "react";
@@ -5,6 +6,10 @@ import Btn from "../Reusable/Btn/Btn";
 
 const Modal = ({ handleModalClose, selectedProjectId }) => {
   const modalRef = useRef(null);
+
+  const openNewTab = (url) => {
+    window.open(url, "_blank");
+  };
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -42,25 +47,16 @@ const Modal = ({ handleModalClose, selectedProjectId }) => {
             );
           })}
           <div className="modal-link-btn">
-            <Btn classes={"btn"}>
-              <a
-                className="github-link"
-                target="_blank"
-                rel="noreferrer"
-                href={projectsData[selectedProjectId].github}
-              >
-                Github
-              </a>
+            <Btn
+              classes={"btn"}
+              clickAction={() =>
+                openNewTab(projectsData[selectedProjectId].github)
+              }
+            >
+              <p className="github-link">Github</p>
             </Btn>
             <Btn classes={"btn"}>
-              <a
-                className="live-demo-link"
-                target="_blank"
-                rel="noreferrer"
-                href={"#"}
-              >
-                Live Demo
-              </a>
+              <p>Live Demo</p>
             </Btn>
           </div>
         </div>

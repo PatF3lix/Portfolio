@@ -1,3 +1,4 @@
+import React from "react";
 import Curtain from "../Curtain/Curtain";
 import Overlay from "../Reusable/Overlay/Overlay";
 
