@@ -73,6 +73,12 @@
   margin-bottom: 1rem;
 }
 
+@media only screen and (min-width: 600px) {
+  .contact-form-container {
+    min-width: 35rem;
+  }
+}
+
 .contact-form-container label {
   display: inline-block;
   font-size: 1.8rem;

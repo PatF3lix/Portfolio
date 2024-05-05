@@ -8,7 +8,24 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+
+const allowedOrigins = [
+  `http://${process.env.ALLOWED_IP_ADDRESS}`,
+  `https://${process.env.ALLOWED_IP_ADDRESS}`,
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+
+// Enable CORS middleware
+app.use(cors(corsOptions));
 
 // Nodemailer transport setup
 const transporter = nodemailer.createTransport({
