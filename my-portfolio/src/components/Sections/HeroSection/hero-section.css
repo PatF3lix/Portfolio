@@ -41,6 +41,18 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .presentational-info {
+    margin: 6rem auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .presentational-info {
+    margin: 6rem auto;
+  }
+}
+
 .hero-name {
   font-size: 8rem;
   font-weight: 700;
