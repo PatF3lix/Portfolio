@@ -45,7 +45,6 @@
 
 .modal-container-outer {
   background-color: #fff;
-  border-radius: 5%;
   overflow: auto;
 }
 
@@ -81,9 +80,11 @@
 
 .modal-project-description {
   font-size: 1.8rem;
+  margin-left: 2rem;
   padding: 2rem;
   padding-top: 1rem;
   letter-spacing: 0.1rem;
+  line-height: 1.4;
 }
 
 @media only screen and (max-width: 500px) {
@@ -107,13 +108,14 @@
 .modal-link-btn {
   display: flex;
   column-gap: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
 }
 
 .modal-feature {
-  margin: 1.2rem auto;
+  margin: 1.2rem 2rem;
   padding: 0 1.5rem;
   font-size: 1.8rem;
+  line-height: 1.4;
 }
 
 @media only screen and (max-width: 500px) {

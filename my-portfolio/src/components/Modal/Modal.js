@@ -41,7 +41,8 @@ const Modal = ({ handleModalClose, selectedProjectId }) => {
           {projectsData[selectedProjectId].features.map((feature) => {
             return (
               <p key={feature.id} className="modal-feature">
-                {`${feature.id}- ${feature.text}`}
+                <b>{feature.id}</b>
+                {`- ${feature.text}`}
               </p>
             );
           })}
