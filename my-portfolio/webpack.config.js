@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
 module.exports = {
@@ -10,7 +11,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
     clean: true,
-    assetModuleFilename: "images/[name][ext]",
   },
   devtool: "source-map",
   module: {
@@ -23,16 +23,18 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
-      },
-      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
     ],
   },
   plugins: [
+    new Dotenv(),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public/favicon_io/site.webmanifest", to: "[name][ext]" },
+      ],
+    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/favicon_io/favicon.ico", // Specify the path to your favicon
@@ -70,7 +72,7 @@ module.exports = {
   ],
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"),
+      directory: path.resolve(__dirname, "public"),
     },
     port: 3000,
     open: true,
