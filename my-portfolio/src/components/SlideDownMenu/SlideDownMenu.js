@@ -27,7 +27,7 @@ const SlideDownMenu = ({ openedMenu }) => {
               clickAction={() => openNewTab(process.env.REACT_APP_GITHUB_URL)}
             >
               <FaGithub />
-              <span className="link-text">GitHub Page</span>
+              <span className="link-text">Github Page</span>
             </Btn>
           </IconContext.Provider>
         </li>
