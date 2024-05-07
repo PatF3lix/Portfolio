@@ -6,7 +6,10 @@ import useScreenWidth from "./hooks/useScreenWidth";
 import HeroSection from "./components/Sections/HeroSection/HeroSection";
 import MainNavMenu from "./components/Sections/MenuSection/MainNavMenu";
 import ContentSection from "./components/Sections/ContentSection/ContentSection";
-import SlideDownMenu from "./components/SlideDownMenu/SlideDownMenu";
+
+const SlideDownMenu = React.lazy(() =>
+  import("./components/SlideDownMenu/SlideDownMenu")
+);
 
 const AboutSection = React.lazy(() =>
   import("./components/Sections/AboutSection/AboutSection")
@@ -14,7 +17,6 @@ const AboutSection = React.lazy(() =>
 const Curtains = React.lazy(() => import("./components/Curtains/Curtains"));
 
 function App() {
-  console.log("Using Bundler");
   const [openedMenu, setOpenedMenu] = useState(false);
   const {
     curtainsVisible,
@@ -47,7 +49,9 @@ function App() {
         ) : (
           selectedOption.content
         )}
-        <SlideDownMenu openedMenu={openedMenu} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <SlideDownMenu openedMenu={openedMenu} />
+        </Suspense>
       </ContentSection>
 
       {displayCurtains && (
