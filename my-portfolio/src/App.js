@@ -1,16 +1,20 @@
 import "./App.css";
 
-import { useState } from "react";
+import React, { useState, Suspense } from "react";
 import useCurtains from "./hooks/useCurtains";
 import useScreenWidth from "./hooks/useScreenWidth";
 import HeroSection from "./components/Sections/HeroSection/HeroSection";
 import MainNavMenu from "./components/Sections/MenuSection/MainNavMenu";
-import SlideDownMenu from "./components/SlideDownMenu/SlideDownMenu";
-import AboutSection from "./components/Sections/AboutSection/AboutSection";
 import ContentSection from "./components/Sections/ContentSection/ContentSection";
-import Curtains from "./components/Curtains/Curtains";
+import SlideDownMenu from "./components/SlideDownMenu/SlideDownMenu";
+
+const AboutSection = React.lazy(() =>
+  import("./components/Sections/AboutSection/AboutSection")
+);
+const Curtains = React.lazy(() => import("./components/Curtains/Curtains"));
 
 function App() {
+  console.log("Using Bundler");
   const [openedMenu, setOpenedMenu] = useState(false);
   const {
     curtainsVisible,
@@ -37,7 +41,9 @@ function App() {
         {selectedOption.id === 1 ? (
           <HeroSection handleMainMenuBtnClick={handleMainMenuBtnClick} />
         ) : selectedOption.id === 2 ? (
-          <AboutSection screenWidth={screenWidth} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <AboutSection screenWidth={screenWidth} />
+          </Suspense>
         ) : (
           selectedOption.content
         )}
@@ -45,11 +51,13 @@ function App() {
       </ContentSection>
 
       {displayCurtains && (
-        <Curtains
-          curtainsVisible={curtainsVisible}
-          handleTransitionEnd={handleTransitionEnd}
-          screenWidth={screenWidth}
-        />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Curtains
+            curtainsVisible={curtainsVisible}
+            handleTransitionEnd={handleTransitionEnd}
+            screenWidth={screenWidth}
+          />
+        </Suspense>
       )}
     </div>
   );
