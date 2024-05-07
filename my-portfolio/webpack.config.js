@@ -79,5 +79,6 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
+    allowedHosts: ["localhost", "www.patf3lix-portfolio.cc"],
   },
 };
