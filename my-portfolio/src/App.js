@@ -6,6 +6,7 @@ import useScreenWidth from "./hooks/useScreenWidth";
 import HeroSection from "./components/Sections/HeroSection/HeroSection";
 import MainNavMenu from "./components/Sections/MenuSection/MainNavMenu";
 import ContentSection from "./components/Sections/ContentSection/ContentSection";
+import Curtains from "./components/Curtains/Curtains";
 
 const SlideDownMenu = React.lazy(() =>
   import("./components/SlideDownMenu/SlideDownMenu")
@@ -14,7 +15,6 @@ const SlideDownMenu = React.lazy(() =>
 const AboutSection = React.lazy(() =>
   import("./components/Sections/AboutSection/AboutSection")
 );
-const Curtains = React.lazy(() => import("./components/Curtains/Curtains"));
 
 function App() {
   const [openedMenu, setOpenedMenu] = useState(false);
@@ -55,13 +55,11 @@ function App() {
       </ContentSection>
 
       {displayCurtains && (
-        <Suspense fallback={<div>Loading...</div>}>
-          <Curtains
-            curtainsVisible={curtainsVisible}
-            handleTransitionEnd={handleTransitionEnd}
-            screenWidth={screenWidth}
-          />
-        </Suspense>
+        <Curtains
+          curtainsVisible={curtainsVisible}
+          handleTransitionEnd={handleTransitionEnd}
+          screenWidth={screenWidth}
+        />
       )}
     </div>
   );

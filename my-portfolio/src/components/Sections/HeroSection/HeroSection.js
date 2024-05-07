@@ -1,31 +1,34 @@
+import HeroWelcome from "../../HeroWelcome/HeroWelcome";
 import "./hero-section.css";
-import Btn from "../../Reusable/Btn/Btn";
-import mainMenuOptions from "../../../data/MainMenuOptions";
+import { useState, useEffect } from "react";
 
 const HeroSection = ({ handleMainMenuBtnClick }) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    // Check if the image is already loaded (cached)
+    const img = new Image();
+    img.src = "./images/hero-background.jpg";
+    if (img.complete) {
+      setImgLoaded(true);
+    } else {
+      img.onload = () => {
+        setImgLoaded(true);
+      };
+    }
+  }, []);
+
   return (
     <section className="hero-section">
-      <div className="presentational-info">
-        <h1 className="hero-name">Patrick Felix Oliveira</h1>
-        <h2 className="hero-title">Software Developer</h2>
-        <div className="hero-intro">
-          <p className="welcome">Welcome to my portfolio!</p>
-          <p className="welcome-text">
-            I&apos;m driven by the realms of full-stack application development
-            and cybersecurity.
-          </p>
-          <p className="welcome-text">
-            Where my focus centers on pioneering solutions to intricate
-            problems.
-          </p>
-          <Btn
-            classes={"btn hero-btn"}
-            clickAction={() => handleMainMenuBtnClick(mainMenuOptions[1])}
-          >
-            <p className="hero-btn-text">About Me</p>
-          </Btn>
-        </div>
-      </div>
+      <img
+        className="hero-bg-image"
+        src="./images/hero-background.jpg"
+        alt="hero background"
+        onLoad={() => setImgLoaded(true)}
+      />
+      {imgLoaded && (
+        <HeroWelcome handleMainMenuBtnClick={handleMainMenuBtnClick} />
+      )}
     </section>
   );
 };

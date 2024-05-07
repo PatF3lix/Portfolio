@@ -1,2 +1,0 @@
-  // "start": "set PORT=3000 && react-scripts start",
-  // "build": "react-scripts build",
