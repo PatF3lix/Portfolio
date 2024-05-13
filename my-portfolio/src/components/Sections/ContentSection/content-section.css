@@ -1,6 +1,4 @@
 .content-section {
   grid-row: 2/3;
   grid-column: 1/2;
-  height: 100%;
-  width: 100%;
 }
