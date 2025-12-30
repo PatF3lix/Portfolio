@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM node:alpine AS builder
+FROM node:23.11.1-alpine3.21 AS builder
 
 # Set the working directory in the container
 WORKDIR /app
@@ -23,7 +23,7 @@ COPY .env .env
 RUN npm run build
 
 # Production stage
-FROM node:alpine
+FROM node:23.11.1-alpine3.21
 
 # Set the working directory in the container
 WORKDIR /app
