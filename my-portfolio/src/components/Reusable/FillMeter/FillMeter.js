@@ -1,4 +1,3 @@
-import React from "react";
 import "./fill-meter.css";
 
 const FillMeter = ({ meterBgColor, barBgColor, fillPercentage }) => {

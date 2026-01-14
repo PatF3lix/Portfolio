@@ -1,4 +1,3 @@
-import React from "react";
 import "./overlay.css";
 
 const Overlay = ({ children, classes }) => {

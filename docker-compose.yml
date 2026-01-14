@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  my-portfolio:
+    container_name: portfolio
+    build:
+      context: ./my-portfolio
+      dockerfile: Dockerfile
+    depends_on:
+      - backend-mailer
+    networks:
+      - nginx-proxy-manager_network
+    volumes:
+      - my-portfolio-data:/app/data
+    restart: unless-stopped
+
+  backend-mailer:
+    container_name: nodeMailer
+    build:
+      context: ./backend-mailer
+      dockerfile: Dockerfile
+    environment:
+      - EMAIL_ADDRESS=${EMAIL_ADDRESS}
+      - EMAIL_PASSWORD=${EMAIL_PASSWORD}
+      - FORWARD_ADDRESS=${FORWARD_ADDRESS}
+      - ALLOWED_IP_ADDRESS=${ALLOWED_IP_ADDRESS}
+    networks:
+      - nginx-proxy-manager_network
+    restart: unless-stopped
+
+networks:
+  nginx-proxy-manager_network:
+    external: true
+
+volumes:
+  my-portfolio-data:

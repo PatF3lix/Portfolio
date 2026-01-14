@@ -1,7 +1,7 @@
 import "./portfolio-section.css";
 import PortfolioProjects from "../../PortfolioProjects/PortfolioProjects";
 import Modal from "../../Modal/Modal";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const PortfolioSection = () => {
   const [showModal, setShowModal] = useState(false);

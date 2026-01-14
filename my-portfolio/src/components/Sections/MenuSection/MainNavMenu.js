@@ -1,4 +1,3 @@
-import React from "react";
 import mainMenuOptions from "../../../data/MainMenuOptions";
 import Btn from "../../Reusable/Btn/Btn";
 import ListItem from "../../Reusable/LisItem/ListItem";
@@ -11,7 +10,21 @@ const MainNavMenu = ({
   handleMainMenuBtnClick,
   setOpenedMenu,
   selectedOption,
+  openedMenu,
 }) => {
+  function toggleOptionsMenu() {
+    var menuIcon = document.querySelector(".side-menu");
+    menuIcon.classList.toggle("side-menu-open");
+    setOpenedMenu((openedMenu) => !openedMenu);
+  }
+
+  function handleNavBtnClick(selectedOption) {
+    handleMainMenuBtnClick(selectedOption);
+    if (openedMenu) {
+      toggleOptionsMenu();
+    }
+  }
+
   return (
     <div className="main-menu">
       <div className="container-logo">
@@ -30,7 +43,7 @@ const MainNavMenu = ({
               >
                 <Btn
                   classes={"main-menu-btn"}
-                  clickAction={() => handleMainMenuBtnClick(menuOption)}
+                  clickAction={() => handleNavBtnClick(menuOption)}
                   altText={menuOption.label}
                 >
                   {menuOption.icon}
@@ -40,7 +53,7 @@ const MainNavMenu = ({
           );
         })}
       </NavBar>
-      <SideMenu setOpenedMenu={setOpenedMenu} />
+      <SideMenu toggleOptionsMenu={toggleOptionsMenu} />
     </div>
   );
 };

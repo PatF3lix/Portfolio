@@ -1,4 +1,3 @@
-import React from "react";
 import "./btn.css";
 
 const Btn = ({ classes, clickAction, children, type, altText }) => {

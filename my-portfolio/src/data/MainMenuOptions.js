@@ -1,5 +1,4 @@
 import React from "react";
-
 import HeroSection from "../components/Sections/HeroSection/HeroSection";
 import PortfolioSection from "../components/Sections/PortfolioSection/PortfolioSection";
 import AboutSection from "../components/Sections/AboutSection/AboutSection";

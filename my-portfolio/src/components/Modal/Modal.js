@@ -1,4 +1,3 @@
-import React from "react";
 import "./modal.css";
 import projectsData from "../../data/ProjectsData";
 import { useEffect, useRef } from "react";
@@ -42,7 +41,8 @@ const Modal = ({ handleModalClose, selectedProjectId }) => {
           {projectsData[selectedProjectId].features.map((feature) => {
             return (
               <p key={feature.id} className="modal-feature">
-                {`${feature.id}- ${feature.text}`}
+                <b>{feature.id}</b>
+                {`- ${feature.text}`}
               </p>
             );
           })}

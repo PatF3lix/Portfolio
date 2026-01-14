@@ -1,4 +1,3 @@
-import React from "react";
 import "./content-section.css";
 
 const ContentSection = ({ children }) => {

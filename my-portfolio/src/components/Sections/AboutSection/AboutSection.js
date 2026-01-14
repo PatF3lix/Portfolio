@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
 import "./about-section.css";
+import { useState, useRef } from "react";
 import ProfessionalSkillCard from "../../ProfesionalSkillCard/ProfesionalSkillCard";
 import PersonalSkillCard from "../../PersonalSkillCard/PersonalSkillCard";
 import aboutMeText from "../../../data/AboutMeText";
