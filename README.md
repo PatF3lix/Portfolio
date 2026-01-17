@@ -3,12 +3,29 @@
 A personal portfolio built with a full-stack architecture. It consists of a **React.js** frontend and a **Node.js/Express.js** backend. The portfolio includes a contact form that sends emails using **Nodemailer**. The project is containerized using **Docker** for easy deployment.
 
 ## Table of Contents
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Features](#features)
-4. [Technologies](#technologies)
-5. [Contributing](#contributing)
-6. [License](#license)
+1. [Requirements](#requirements)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Features](#features)
+5. [Technologies](#technologies)
+6. [Contributing](#contributing)
+7. [License](#license)
+
+## Requirements
+
+Before starting, make sure your system meets the following requirements:
+
+### Software
+- **Node.js** v16+ (includes npm)
+- **npm** (Node Package Manager)
+- **Docker** (optional, required for Docker-based setup)
+- **Docker Compose** (optional, required for Docker-based setup)
+
+### Accounts / Services
+- An **email account** (e.g., Gmail) for the contact form to send emails
+- Optional: server IP address for allowed connections in backend
+
+> ⚠️ Ensure you have all required software installed and environment variables prepared before proceeding to installation.
 
 ## Installation
 
