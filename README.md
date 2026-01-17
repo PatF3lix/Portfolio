@@ -1,6 +1,16 @@
 # My Portfolio
 
-A personal portfolio built with a full-stack architecture. It consists of a **React.js** frontend and a **Node.js/Express.js** backend. The portfolio includes a contact form that sends emails using **Nodemailer**. The project is containerized using **Docker** for easy deployment.
+A **full-stack personal portfolio** designed to showcase projects, skills, and professional experience. It features a **modern React.js frontend** with a clean and interactive user interface, and a **Node.js/Express.js backend** that powers the contact form functionality using **Nodemailer**.  
+
+The entire application is **containerized using Docker**, allowing for consistent, reliable deployment across environments. This project demonstrates best practices in **frontend-backend integration**, environment configuration, and containerized development workflows.  
+
+**Highlights of the portfolio include:**  
+- **Interactive Contact Form** – Visitors can send messages directly from the portfolio, forwarded securely to your email.  
+- **Responsive Design** – Optimized for desktop, tablet, and mobile devices.  
+- **Dockerized Architecture** – Easily run and deploy the frontend and backend using Docker Compose.  
+- **Full-Stack Integration** – Demonstrates seamless communication between React frontend and Node/Express backend.  
+
+> This project serves as a professional showcase of web development, backend integration, and deployment practices using modern web technologies.
 
 ## Table of Contents
 1. [Requirements](#requirements)
