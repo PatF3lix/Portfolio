@@ -55,9 +55,9 @@ const Modal = ({ handleModalClose, selectedProjectId }) => {
             >
               <p className="github-link">Github</p>
             </Btn>
-            <Btn classes={"btn"}>
+            {/* <Btn classes={"btn"}>
               <p>Live Demo</p>
-            </Btn>
+            </Btn> */}
           </div>
         </div>
       </div>

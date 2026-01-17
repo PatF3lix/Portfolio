@@ -13,6 +13,8 @@ services:
     volumes:
       - my-portfolio-data:/app/data
     restart: unless-stopped
+    ports:              
+      - "3000:3000"    
 
   backend-mailer:
     container_name: nodeMailer

@@ -12,59 +12,82 @@ A personal portfolio built with a full-stack architecture. It consists of a **Re
 
 ## Installation
 
-### Clone the repository:
+### 1️⃣ Clone the repository:
+
 ```bash
 git clone https://github.com/PatF3lix/Portfolio.git
+cd Portfolio
 ```
 
-### Backend Setup:
+### 2️⃣ Create Docker Network
 
-1. Navigate ti the backend directory backend-mailer:
-   cd backend-mailer
+Before starting the containers, create the external Docker network required by the setup:
+
+```bash
+docker network create nginx-proxy-manager_network
+```
+⚠️ Make sure this network name matches the one defined in your docker-compose.yml.
+
+3️⃣ Run with Docker Compose (Recommended)
+
+Make sure Docker and Docker Compose are installed.
+
+   1. Build and start the containers:
+
+      ```bash
+      docker network create nginx-proxy-manager_network
+      ```
+
+   2. Check running containers:
+
+      ```bash
+      docker ps
+      ```
+   You should see:
+
+      ```bash
+      CONTAINER NAME       PORTS
+      portfolio            0.0.0.0:3000->3000/tcp
+      nodeMailer           ...
+      ```
+   3. Access the portfolio:
+      Open your browser at:
+
+      ```bash
+      http://localhost:3000
+      ```
+
+   The backend (nodeMailer) will automatically handle the contact form emails.
+
+   4️⃣  Run Locally without Docker (Optional)
+
+      1. Backend
+
+      ```bash
+      cd backend-mailer
+      npm install
+      npm start
+      ```
+
+      Backend runs on http://localhost:5000 by default.
+
+      2. Frontend
+
+      ```bash
+      cd my-portfolio
+      npm install
+      npm start
+      ```
+
+      Frontend runs on http://localhost:3000.
    
-3. Install dependencies:
-   npm install
-   
-5. Create a .env file in the backend directory with the following variables:
-   EMAIL_ADDRESS=your-email@gmail.com
-   EMAIL_PASSWORD=your-email-password
-   FORWARD_ADDRESS=destination-email@gmail.com
-   ALLOWED_IP_ADDRESS=your-server-ip-address
+   5️⃣ Stop the Application
 
-### FrontEnd Setup:
+      If running with Docker:
 
-1. Navigate to the frontend directory my-portfolio
-    cd my-portfolio
-   
-3. Install dependencies:
-    npm install
-   
-5. Create a .env file in the my-portfolio fontend directory for any environment specific-variables if necessary.
-
-
-### Docker Setup (Optional):
-
-if you want to run both the backend and frontend using Docker, make sure you have Docker installed, and follow these steps:
-
-1. Build the Docker images for both backend and frontend
-   docker-compose build
-   
-2. Start the application
-   docker-compose up
-
-## Usage
-
-1. Run the backend (Express server):
-   npm start
-   Note: the backend will be running on http://localhost:5000
-
-2. Run the frontend
-   npm start
-   Note: the frontend will be running on http://localhost:3000
-
-3. Open your browser and navigate to http://localhost:3000 to view your portfolio.
-4. Use the Contact Form on the portfolio to send an email, which will be handled by the backend and forwarded to yours specified email address.
-
+      ```bash
+      docker compose down
+      ```
 
 ## Features
 

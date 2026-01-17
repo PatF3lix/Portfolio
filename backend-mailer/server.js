@@ -13,7 +13,7 @@ const allowedOrigins = [process.env.ALLOWED_IP_ADDRESS];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if (origin != null && allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
