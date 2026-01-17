@@ -28,9 +28,13 @@ git clone https://github.com/PatF3lix/Portfolio.git
 5. Create a .env file in the backend directory with the following variables:
    
    EMAIL_ADDRESS=your-email@gmail.com
+   
    EMAIL_PASSWORD=your-email-password
+   
    FORWARD_ADDRESS=destination-email@gmail.com
+   
    ALLOWED_IP_ADDRESS=your-server-ip-address
+   
 
 ### FrontEnd Setup:
 
